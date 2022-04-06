@@ -41,6 +41,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## TODO:
 - [ ] setup CI/CD
-- [ ] setup boilerplate and routing
+- [x] setup boilerplate and routing
 - [ ] setup color scheme with dark mode
 - [ ] setup animations with react spring
