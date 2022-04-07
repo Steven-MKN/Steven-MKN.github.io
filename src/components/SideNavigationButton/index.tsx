@@ -26,7 +26,7 @@ const SideNavigationButton: React.FC<ISideNavigationButtonProps> = ({button}) =>
     onMouseLeave={handleMouseLeave}
   >
     <span style={styles.iconWrapper}>
-      <button.Icon color={"#171717"} size={"20px"}/>
+      <button.Icon color={hover || button.selected? "#e7e7e7": "#171717"} size={"20px"}/>
     </span>
     {/* @ts-ignore */}
     {hover && <span style={styles.buttonText}>{button.text}</span>}
@@ -44,6 +44,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    cursor: "pointer",
   },
   iconWrapper: {
     display: 'flex',
@@ -59,7 +60,8 @@ const styles = {
     background: '#3c4072',
   },
   buttonText: {
-    paddingRight: '35px'
+    paddingRight: '35px',
+    color: '#e7e7e7',
   }
 }
 
