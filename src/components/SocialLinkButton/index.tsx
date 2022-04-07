@@ -37,10 +37,15 @@ const SocialLinkButton: React.FC<SocialLinkType> = ({link, type}) => {
     setHover(false)
   }
 
+  const handleClick = () => {
+    window.open(link, "_blank")?.focus()
+  }
+
   return <span
     style={styles.main}
     onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
+    onClick={handleClick}
   >
     {mapTypeToIcon(type, hover)}
   </span>

@@ -7,11 +7,11 @@ interface IHeroSectionProps {
 }
 
 const links: SocialLinkType[] = [
-  {type: "linkedin", link: "https://google.com"},
+  {type: "linkedin", link: "https://www.linkedin.com/in/steven1mokoena"},
   {type: "whatsapp", link: "https://wa.me/27790231430"},
   {type: "cell", link: "tel:+27790231430"},
   {type: "email", link: "mailto:steventmokoena@gmail.com"},
-  {type: "github", link: "mailto:steventmokoena@gmail.com"},
+  {type: "github", link: "https://github.com/Steven-MKN"},
 ]
 
 const HeroSection: React.FC<IHeroSectionProps> = () => {
