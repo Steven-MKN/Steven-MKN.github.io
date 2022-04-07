@@ -36,7 +36,8 @@ const AboutSection: React.FC<IAboutSectionProps> = () => {
   return <div>
     <SubSection>
       {
-        about.about.map(it => <p>{it}</p>)
+        /* @ts-ignore */
+        about.about.map(it => <p style={styles.about}>{it}</p>)
       }
     </SubSection>
     <SubSection title={"Skills"}>
@@ -54,6 +55,12 @@ const styles = {
     flexDirection: 'row',
     flexWrap: "wrap",
     justifyContent: "center"
+  },
+  about: {
+    letterSpacing: "1.2px",
+    wordSpacing: "3px",
+    whiteSpace: "break-space",
+    lineHeight: "145%",
   }
 }
 

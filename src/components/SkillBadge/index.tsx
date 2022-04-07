@@ -50,7 +50,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: '10px 8px 10px 18px'
+    padding: '14px 20px 28px 20px '
   },
   skillText: {
     fontSize: 14
