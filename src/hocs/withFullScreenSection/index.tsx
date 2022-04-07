@@ -1,7 +1,6 @@
 import React from "react";
 
 const withFullScreenSection = (Child: React.FC, sectionTitle?: string, safeArea: boolean = true) => (props: any) => {
-  console.log(Child.displayName)
   return <WithFullScreenSection title={sectionTitle} safeArea={safeArea}>
     <Child {...props}/>
   </WithFullScreenSection>
@@ -18,7 +17,8 @@ const WithFullScreenSection: React.FC<{ title?: string, safeArea: boolean }> = (
 
 const styles = {
   main: {
-    minHeight: "100vh"
+    minHeight: "100vh",
+    zIndex: 500,
   }
 }
 

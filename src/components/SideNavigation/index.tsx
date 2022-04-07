@@ -57,7 +57,7 @@ const Index: React.FC<ISideNavigationProps> = () => {
     {/* @ts-ignore */}
     <div style={styles.buttonList}>
       {
-        navigationItems.map(it => <SideNavigationButton button={it}/>)
+        navigationItems.map(it => <SideNavigationButton button={it} key={it.relativeRoute}/>)
       }
     </div>
   </div>
