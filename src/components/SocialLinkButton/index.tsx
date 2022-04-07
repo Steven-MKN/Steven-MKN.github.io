@@ -1,23 +1,28 @@
 import React, {useState} from "react";
 import {SocialIconType, SocialLinkType} from "./types";
-import {GrLinkedinOption, GrTwitter, GrCircleQuestion} from "react-icons/gr";
+import {GrLinkedinOption, GrTwitter, GrCircleQuestion, GrGithub} from "react-icons/gr";
 import {MdEmail, MdOutlinePhone} from "react-icons/md";
 import {FaWhatsapp} from "react-icons/fa";
 
 const mapTypeToIcon = (type: SocialIconType, hover: boolean) => {
+  const props = {
+    color: hover? '#3c4072': '#171717'
+  }
   switch (type) {
     case "linkedin":
-      return <GrLinkedinOption color={hover? '#3c4072': '#171717'}/>;
+      return <GrLinkedinOption {...props}/>;
     case "twitter":
-      return <GrTwitter color={hover? '#3c4072': '#171717'}/>;
+      return <GrTwitter {...props}/>;
     case "cell":
-      return <MdOutlinePhone color={hover? '#3c4072': '#171717'}/>;
+      return <MdOutlinePhone {...props}/>;
     case "email":
-      return <MdEmail color={hover? '#3c4072': '#171717'}/>;
+      return <MdEmail {...props}/>;
     case "whatsapp":
-      return <FaWhatsapp color={hover? '#3c4072': '#171717'}/>;
+      return <FaWhatsapp {...props}/>;
+    case "github":
+      return <GrGithub {...props}/>;
     default:
-      return <GrCircleQuestion color={hover? '#3c4072': '#171717'}/>;
+      return <GrCircleQuestion {...props}/>;
   }
 }
 

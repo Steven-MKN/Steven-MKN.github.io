@@ -11,6 +11,7 @@ const links: SocialLinkType[] = [
   {type: "whatsapp", link: "https://wa.me/27790231430"},
   {type: "cell", link: "tel:+27790231430"},
   {type: "email", link: "mailto:steventmokoena@gmail.com"},
+  {type: "github", link: "mailto:steventmokoena@gmail.com"},
 ]
 
 const HeroSection: React.FC<IHeroSectionProps> = () => {

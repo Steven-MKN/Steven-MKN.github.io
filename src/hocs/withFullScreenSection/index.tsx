@@ -8,7 +8,7 @@ const withFullScreenSection = (Child: React.FC, sectionTitle?: string, safeArea:
 
 const WithFullScreenSection: React.FC<{ title?: string, safeArea: boolean }> = ({children, title, safeArea}) => {
   return <div style={styles.main}>
-    <div style={{marginLeft: safeArea ? "120px" : "0"}}>
+    <div style={{paddingLeft: safeArea ? "120px" : "0", paddingTop: safeArea ? "28px": "0px"}}>
       {title && <h1>{title}</h1>}
       {children}
     </div>

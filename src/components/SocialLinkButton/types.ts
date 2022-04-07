@@ -3,4 +3,4 @@ export type SocialLinkType = {
   readonly link: string;
 }
 
-export type SocialIconType = "twitter" | "linkedin" | "whatsapp" | "email" | "cell";
+export type SocialIconType = "twitter" | "linkedin" | "whatsapp" | "email" | "cell" | "github";
