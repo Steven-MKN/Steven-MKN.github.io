@@ -39,8 +39,8 @@ const SkillBadge: React.FC<ISkillBadgeProps> = ({skill}) => {
     // @ts-ignore
     <span style={styles.main}>
     {mapSkillToIcon(skill.skill)}
-      <span style={styles.skillText}>{skill.skill}</span>
-      <span style={styles.levelText}>({skill.level})</span>
+      <span className={"text"} style={styles.skillText}>{skill.skill}</span>
+      <span className={"text"} style={styles.levelText}>({skill.level})</span>
   </span>
   )
 }
