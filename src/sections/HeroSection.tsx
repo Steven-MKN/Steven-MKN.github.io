@@ -8,8 +8,8 @@ interface IHeroSectionProps {
 
 const links: SocialLinkType[] = [
   {type: "linkedin", link: "https://www.linkedin.com/in/steven1mokoena"},
-  {type: "whatsapp", link: "https://wa.me/27790231430"},
-  {type: "cell", link: "tel:+27790231430"},
+  {type: "whatsapp", link: "https://wa.me/27622995782"},
+  {type: "cell", link: "tel:+27622995782"},
   {type: "email", link: "mailto:steventmokoena@gmail.com"},
   {type: "github", link: "https://github.com/Steven-MKN"},
 ]
