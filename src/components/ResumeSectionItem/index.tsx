@@ -30,6 +30,7 @@ const styles = {
   },
   sideBar: {
     position: 'absolute',
+    top: '4px',
     height: '100%',
     width: '3px',
     background: "#445881"
