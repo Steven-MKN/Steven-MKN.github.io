@@ -1,6 +1,7 @@
 import React from "react";
 import {SocialLinkType} from "../SocialLinkButton/types";
 import SocialLinkButton from "../SocialLinkButton";
+import { Box } from "@mui/material";
 
 interface ISocialLinksProps {
   readonly links: SocialLinkType[];
@@ -9,9 +10,9 @@ interface ISocialLinksProps {
 const SocialLinks: React.FC<ISocialLinksProps> = ({links}) => {
   return (
     // @ts-ignore
-    <div style={styles.main}>
+    <Box sx={styles.main}>
       {links.map(it => <SocialLinkButton key={it.type} link={it.link} type={it.type}/>)}
-    </div>
+    </Box>
   )
 }
 

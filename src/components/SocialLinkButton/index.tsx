@@ -3,6 +3,7 @@ import {SocialIconType, SocialLinkType} from "./types";
 import {GrLinkedinOption, GrTwitter, GrCircleQuestion, GrGithub} from "react-icons/gr";
 import {MdEmail, MdOutlinePhone} from "react-icons/md";
 import {FaWhatsapp} from "react-icons/fa";
+import {Box} from "@mui/material";
 
 const mapTypeToIcon = (type: SocialIconType, hover: boolean) => {
   const props = {
@@ -41,14 +42,14 @@ const SocialLinkButton: React.FC<SocialLinkType> = ({link, type}) => {
     window.open(link, "_blank")?.focus()
   }
 
-  return <span
-    style={styles.main}
+  return <Box component="span"
+    sx={styles.main}
     onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
     onClick={handleClick}
   >
     {mapTypeToIcon(type, hover)}
-  </span>
+  </Box>
 }
 
 const styles = {

@@ -1,5 +1,6 @@
 import React from "react";
 import {ResumeSectionItemType} from "./types";
+import {Box, Typography} from "@mui/material";
 
 interface IResumeSectionItemProps {
   readonly item: ResumeSectionItemType;
@@ -8,18 +9,18 @@ interface IResumeSectionItemProps {
 const ResumeSectionItem: React.FC<IResumeSectionItemProps> = ({item}) => {
   return (
     // @ts-ignore
-    <div style={styles.main}>
+    <Box sx={styles.main}>
       {/* @ts-ignore */}
-      <div style={styles.sideBar}><span style={styles.sectionItemInit}/></div>
-      <div style={styles.content}>
-        <h5 style={styles.heading}>{item.title}</h5>
-        <div style={styles.years}><span className={"text"}>{item.dateStart} </span> - <span
-          className={"text"}>{item.dateEnd} </span></div>
-        <h6 style={styles.location}>{item.location}</h6>
+      <Box sx={styles.sideBar}><Box component="span" sx={styles.sectionItemInit}/></Box>
+      <Box sx={styles.content}>
+        <Typography variant={"h5"} sx={styles.heading}>{item.title}</Typography>
+        <Box sx={styles.years}><Box component="span" className={"text"}>{item.dateStart} </Box> - <Box component="span"
+          className={"text"}>{item.dateEnd} </Box></Box>
+        <Typography variant={"h6"} sx={styles.location}>{item.location}</Typography>
 
         <ul>{item.rolesAndAchievements.map(it => <li>{it}</li>)}</ul>
-      </div>
-    </div>)
+      </Box>
+    </Box>)
 }
 
 const styles = {

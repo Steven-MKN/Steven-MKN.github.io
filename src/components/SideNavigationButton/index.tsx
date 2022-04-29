@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import React, {useState} from "react";
 import {NavigationButtonType} from "./types";
 
@@ -16,8 +17,8 @@ const SideNavigationButton: React.FC<ISideNavigationButtonProps> = ({button}) =>
     setHover(false)
   }
 
-  return <span
-    style={{
+  return <Box component="span"
+    sx={{
       ...styles.main,
       ...(hover ? styles.hover : {}),
       ...(button.selected ? styles.hover : {})
@@ -25,12 +26,12 @@ const SideNavigationButton: React.FC<ISideNavigationButtonProps> = ({button}) =>
     onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
   >
-    <span style={styles.iconWrapper}>
+    <Box component="span" sx={styles.iconWrapper}>
       <button.Icon color={hover || button.selected? "#e7e7e7": "#171717"} size={"20px"}/>
-    </span>
+    </Box>
     {/* @ts-ignore */}
-    {hover && <span style={styles.buttonText}>{button.text}</span>}
-  </span>
+    {hover && <Box component="span" sx={styles.buttonText}>{button.text}</Box>}
+  </Box>
 }
 
 const styles = {

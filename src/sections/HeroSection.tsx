@@ -2,6 +2,7 @@ import React from "react";
 import withFullScreenSection from "../hocs/withFullScreenSection"
 import SocialLinks from "../components/SocialLinks";
 import {SocialLinkType} from "../components/SocialLinkButton/types";
+import {Box, Typography} from "@mui/material";
 
 interface IHeroSectionProps {
 }
@@ -18,14 +19,14 @@ const HeroSection: React.FC<IHeroSectionProps> = () => {
   // set background image as BW when tab/window is blurred
   return (
     // @ts-ignore
-    <div style={styles.main}>
+    <Box sx={styles.main}>
       {/* @ts-ignore */}
-      <div style={styles.intro}>
-        <h2 style={styles.heroName}>Steven T. Mokoena</h2>
-        <h3>Full-Stack Developer</h3>
+      <Box sx={styles.intro}>
+        <Typography variant={"h2"} sx={styles.heroName}>Steven T. Mokoena</Typography >
+        <Typography variant={"h3"}>Full-Stack Developer</Typography >
         <SocialLinks links={links}/>
-      </div>
-    </div>
+      </Box>
+    </Box>
   )
 }
 
@@ -37,7 +38,13 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    paddingLeft: "150px"
+    paddingLeft: {
+      xs: "20px",
+      sm: "12px",
+      md: "120px",
+      lg: "150px",
+      xl: "150px",
+    }
   },
   intro: {
     display: "flex",

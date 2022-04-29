@@ -8,6 +8,7 @@ import {
   MdOutlineVerticalSplit,
   MdPersonOutline
 } from "react-icons/md";
+import {Box} from "@mui/material";
 
 interface ISideNavigationProps {
 }
@@ -53,14 +54,14 @@ const navigationItems: NavigationButtonType[] = [
 
 const Index: React.FC<ISideNavigationProps> = () => {
   // @ts-ignore
-  return <div style={styles.main}>
+  return <Box sx={styles.main} container>
     {/* @ts-ignore */}
-    <div style={styles.buttonList}>
+    <Box sx={styles.buttonList}>
       {
         navigationItems.map(it => <SideNavigationButton button={it} key={it.relativeRoute}/>)
       }
-    </div>
-  </div>
+    </Box>
+  </Box>
 }
 
 const styles = {

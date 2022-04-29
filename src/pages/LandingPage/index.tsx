@@ -2,19 +2,20 @@ import React from "react";
 import HeroSection from "../../sections/HeroSection";
 import AboutSection from "../../sections/AboutSection";
 import SideNavigation from "../../components/SideNavigation";
+import { Grid } from "@mui/material";
 
 interface ILandingPageProps {
 }
 
 const LandingPage: React.FC<ILandingPageProps> = () => {
-  return <div style={styles.main}>
+  return <Grid container sx={styles.main}>
     <SideNavigation/>
     {/* @ts-ignore */}
-    <div style={styles.sectionsWrapper}>
+    <Grid sx={styles.sectionsWrapper}>
       <HeroSection/>
       <AboutSection/>
-    </div>
-  </div>
+    </Grid>
+  </Grid>
 }
 
 const styles = {

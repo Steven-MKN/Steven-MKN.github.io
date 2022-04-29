@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import React from "react";
 import ResumeSection from "../ResumeSection";
 import {ResumeType} from "./types";
@@ -8,9 +9,9 @@ interface IResumeProps {
 
 const Resume: React.FC<IResumeProps> = ({resume}) => {
   // @ts-ignore
-  return <div style={styles.main}>
+  return <Box sx={styles.main}>
     {resume.sections.map(it => <ResumeSection resumeSection={it} />)}
-  </div>
+  </Box>
 }
 
 const styles = {

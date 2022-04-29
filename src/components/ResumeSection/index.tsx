@@ -1,3 +1,4 @@
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import ResumeSectionItem from "../ResumeSectionItem";
 import {ResumeSectionType} from "./types";
@@ -7,11 +8,11 @@ interface IResumeSectionProps {
 }
 
 const ResumeSection: React.FC<IResumeSectionProps> = ({resumeSection}) => {
-  return <div style={styles.main}>
+  return <Box sx={styles.main}>
     {/* @ts-ignore */}
-    <h4 style={styles.title}>{resumeSection.title}</h4>
+    <Typography variant={"h4"} sx={styles.title}>{resumeSection.title}</Typography>
     {resumeSection.items.map(it => <ResumeSectionItem item={it} />)}
-  </div>
+  </Box>
 }
 
 const styles = {

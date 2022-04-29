@@ -5,6 +5,7 @@ import {RiReactjsLine} from "react-icons/ri"
 import {CgInfinity} from "react-icons/cg"
 import {TiFlowMerge} from "react-icons/ti"
 import {DiCode, DiDatabase, DiGitPullRequest} from "react-icons/di"
+import {Box} from "@mui/material";
 
 interface ISkillBadgeProps {
   readonly skill: SkillBadgeType;
@@ -37,11 +38,11 @@ const mapSkillToIcon = (skill: SkillType) => {
 const SkillBadge: React.FC<ISkillBadgeProps> = ({skill}) => {
   return (
     // @ts-ignore
-    <span style={styles.main}>
+    <Box component="span" sx={styles.main}>
     {mapSkillToIcon(skill.skill)}
-      <span className={"text"} style={styles.skillText}>{skill.skill}</span>
-      <span className={"text"} style={styles.levelText}>({skill.level})</span>
-  </span>
+      <Box component="span" className={"text"} sx={styles.skillText}>{skill.skill}</Box>
+      <Box component="span" className={"text"} sx={styles.levelText}>({skill.level})</Box>
+  </Box>
   )
 }
 

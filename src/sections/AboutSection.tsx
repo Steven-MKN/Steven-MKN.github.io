@@ -5,6 +5,7 @@ import SkillBadge from "../components/SkillBadge";
 import {SkillBadgeType} from "../components/SkillBadge/types";
 import {ResumeType} from "../components/Resume/types";
 import Resume from "../components/Resume";
+import { Box } from "@mui/material";
 
 interface IAboutSectionProps {
 }
@@ -97,26 +98,26 @@ const about: {about: string[], skills: SkillBadgeType[], resume: ResumeType} = {
 
 const AboutSection: React.FC<IAboutSectionProps> = () => {
 
-  return <div>
+  return <Box>
     <SubSection>
       {
         /* @ts-ignore */
-        about.about.map(it => <p style={styles.about}>{it}</p>)
+        about.about.map(it => <p sx={styles.about}>{it}</p>)
       }
     </SubSection>
     <SubSection title={"Skills"}>
       {/* @ts-ignore */}
-      <div style={styles.skills}>
+      <Box sx={styles.skills}>
         {about.skills.map(it => <SkillBadge skill={it} />)}
-      </div>
+      </Box>
     </SubSection>
     <SubSection title={"Resume"}>
       {/* @ts-ignore */}
-      <div style={styles.resume}>
+      <Box sx={styles.resume}>
         <Resume resume={about.resume}/>
-      </div>
+      </Box>
     </SubSection>
-  </div>
+  </Box>
 }
 
 const styles = {

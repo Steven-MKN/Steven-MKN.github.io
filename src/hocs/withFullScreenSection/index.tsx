@@ -1,4 +1,5 @@
 import React from "react";
+import {Box, Typography} from "@mui/material";
 
 const withFullScreenSection = (Child: React.FC, sectionTitle?: string, safeArea: boolean = true) => (props: any) => {
   return <WithFullScreenSection title={sectionTitle} safeArea={safeArea}>
@@ -7,12 +8,16 @@ const withFullScreenSection = (Child: React.FC, sectionTitle?: string, safeArea:
 }
 
 const WithFullScreenSection: React.FC<{ title?: string, safeArea: boolean }> = ({children, title, safeArea}) => {
-  return <div style={styles.main}>
-    <div style={{paddingLeft: safeArea ? "120px" : "0", paddingTop: safeArea ? "28px": "0px"}}>
-      {title && <h1>{title}</h1>}
+  return <Box sx={styles.main}>
+    <Box sx={{paddingLeft: {
+        lg: safeArea ? "120px" : "0",
+
+        xs: safeArea ? "20px" : "0",
+      }, paddingTop: safeArea ? "28px": "0px"}}>
+      {title && <Typography variant={"h1"}>{title}</Typography>}
       {children}
-    </div>
-  </div>
+    </Box>
+  </Box>
 }
 
 const styles = {
