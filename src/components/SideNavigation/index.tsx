@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import SideNavigationButton from "../SideNavigationButton";
 import {NavigationButtonType} from "../SideNavigationButton/types";
 import {
@@ -8,7 +8,9 @@ import {
   MdOutlineVerticalSplit,
   MdPersonOutline
 } from "react-icons/md";
-import {Box} from "@mui/material";
+import {Box, Drawer} from "@mui/material";
+import {GiHamburgerMenu} from "react-icons/gi";
+import SideNavigationListItem from "../SideNavigationListItem";
 
 interface ISideNavigationProps {
 }
@@ -53,15 +55,37 @@ const navigationItems: NavigationButtonType[] = [
 ]
 
 const Index: React.FC<ISideNavigationProps> = () => {
+  const anchor = 'left'
+  const [isOpen, setIsOpen] = useState(false)
+  const handleDrawerToggle = () => {
+      setIsOpen(!isOpen)
+  }
+
   // @ts-ignore
-  return <Box sx={styles.main} container>
+  return <>
     {/* @ts-ignore */}
-    <Box sx={styles.buttonList}>
-      {
-        navigationItems.map(it => <SideNavigationButton button={it} key={it.relativeRoute}/>)
-      }
+    <Box sx={styles.main} container>
+      <Box sx={styles.buttonList}>
+        {
+          navigationItems.map(it => <SideNavigationButton button={it} key={it.relativeRoute}/>)
+        }
+      </Box>
+
     </Box>
-  </Box>
+    <Box sx={styles.menuButton} onClick={handleDrawerToggle}>
+      <GiHamburgerMenu />
+    </Box>
+    <Drawer
+        anchor={anchor}
+        open={isOpen}
+        onClose={handleDrawerToggle}
+        sx={styles.drawer}
+    >
+      {
+        navigationItems.map(it => <SideNavigationListItem button={it} key={it.relativeRoute}/>)
+      }
+    </Drawer>
+  </>
 }
 
 const styles = {
@@ -74,6 +98,13 @@ const styles = {
     transform: 'translate(0, -50%)',
     padding: '12px 18px',
     zIndex: 700,
+    display: {
+      xs: 'none',
+      sm: 'none',
+      md: 'block',
+      lg: 'block',
+      xl: 'block'
+    },
   },
   buttonList: {
     width: 'max-content',
@@ -81,6 +112,33 @@ const styles = {
     display: 'flex',
     flexWrap: 'nowrap',
     flexDirection: 'column',
+  },
+  menuButton: {
+    background: '#00000000',
+    position: 'absolute',
+    width: 'max-content',
+    height: 'max-content',
+    left: '5px',
+    top: '5px',
+    padding: '12px 12px',
+    zIndex: 700,
+    display: {
+      xs: 'block',
+      sm: 'block',
+      md: 'none',
+      lg: 'none',
+      xl: 'none'
+    },
+  },
+  drawer: {
+    alignItems: 'stretch',
+    display: {
+      xs: 'flex',
+      sm: 'flex',
+      md: 'none',
+      lg: 'none',
+      xl: 'none'
+    },
   }
 }
 
