@@ -11,27 +11,28 @@ interface ISkillBadgeProps {
   readonly skill: SkillBadgeType;
 }
 
+const iconProps = {
+  size: "26px",
+}
+
 const mapSkillToIcon = (skill: SkillType) => {
-  const props = {
-    size: "26px",
-  }
   switch (skill) {
-    case "Java": return <SiJava {...props}/>;
-    case "React": return <SiReact {...props}/>;
-    case "JavaScript": return <SiJavascript {...props}/>;
-    case "React Native": return <RiReactjsLine {...props}/>;
-    case "TypeScript": return <SiTypescript {...props}/>;
-    case "Spring": return <SiSpring {...props}/>;
-    case "Kotlin": return <SiKotlin {...props}/>;
-    case "MongoDB": return <SiMongodb {...props}/>;
-    case "SQL": return <DiDatabase {...props}/>;
-    case "SDLC": return <TiFlowMerge {...props}/>;
-    case "Microservices": return <SiKotlin {...props}/>;
-    case "CI/CD": return <CgInfinity {...props}/>;
-    case "Docker": return <SiDocker {...props}/>;
-    case "Git": return <DiGitPullRequest {...props}/>;
-    case "Kubernetes": return <SiKubernetes {...props}/>;
-    default: return <DiCode {...props}/>
+    case "Java": return <SiJava {...iconProps}/>;
+    case "React": return <SiReact {...iconProps}/>;
+    case "JavaScript": return <SiJavascript {...iconProps}/>;
+    case "React Native": return <RiReactjsLine {...iconProps}/>;
+    case "TypeScript": return <SiTypescript {...iconProps}/>;
+    case "Spring": return <SiSpring {...iconProps}/>;
+    case "Kotlin": return <SiKotlin {...iconProps}/>;
+    case "MongoDB": return <SiMongodb {...iconProps}/>;
+    case "SQL": return <DiDatabase {...iconProps}/>;
+    case "SDLC": return <TiFlowMerge {...iconProps}/>;
+    case "Microservices": return <SiKotlin {...iconProps}/>;
+    case "CI/CD": return <CgInfinity {...iconProps}/>;
+    case "Docker": return <SiDocker {...iconProps}/>;
+    case "Git": return <DiGitPullRequest {...iconProps}/>;
+    case "Kubernetes": return <SiKubernetes {...iconProps}/>;
+    default: return <DiCode {...iconProps}/>
   }
 }
 
