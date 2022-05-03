@@ -29,7 +29,7 @@ const Project: React.FC<IProjectProps> = ({project}) => {
                     <Typography ml={1} mr={5} mb={2} variant={"body1"}>{project.description}</Typography>
                 </Box>
                 <Box>
-                    {project.techStack.map(it => <TechItem item={it}/>)}
+                    {project.techStack.map(it => <TechItem item={it} key={it.tech}/>)}
                 </Box>
             </Box>
         </Box>

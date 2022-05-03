@@ -10,7 +10,7 @@ interface IResumeProps {
 const Resume: React.FC<IResumeProps> = ({resume}) => {
   // @ts-ignore
   return <Box sx={styles.main}>
-    {resume.sections.map(it => <ResumeSection resumeSection={it} />)}
+    {resume.sections.map(it => <ResumeSection resumeSection={it} key={it.title} />)}
   </Box>
 }
 

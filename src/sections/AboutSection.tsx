@@ -5,7 +5,7 @@ import SkillBadge from "../components/SkillBadge";
 import {SkillBadgeType} from "../components/SkillBadge/types";
 import {ResumeType} from "../components/Resume/types";
 import Resume from "../components/Resume";
-import { Box } from "@mui/material";
+import {Box, Typography} from "@mui/material";
 
 interface IAboutSectionProps {
 }
@@ -102,13 +102,13 @@ const AboutSection: React.FC<IAboutSectionProps> = () => {
     <SubSection>
       {
         /* @ts-ignore */
-        about.about.map(it => <p sx={styles.about}>{it}</p>)
+        about.about.map(it => <Typography variant={"body1"} sx={styles.about} key={it}>{it}</Typography>)
       }
     </SubSection>
     <SubSection title={"Skills"}>
       {/* @ts-ignore */}
       <Box sx={styles.skills}>
-        {about.skills.map(it => <SkillBadge skill={it} />)}
+        {about.skills.map(it => <SkillBadge skill={it} key={it.skill} />)}
       </Box>
     </SubSection>
     <SubSection title={"Resume"}>

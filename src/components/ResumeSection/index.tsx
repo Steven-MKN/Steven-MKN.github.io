@@ -11,7 +11,7 @@ const ResumeSection: React.FC<IResumeSectionProps> = ({resumeSection}) => {
   return <Box sx={styles.main}>
     {/* @ts-ignore */}
     <Typography variant={"h4"} sx={styles.title}>{resumeSection.title}</Typography>
-    {resumeSection.items.map(it => <ResumeSectionItem item={it} />)}
+    {resumeSection.items.map(it => <ResumeSectionItem item={it} key={it.title} />)}
   </Box>
 }
 

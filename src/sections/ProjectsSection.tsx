@@ -29,7 +29,7 @@ const projects: ProjectType[] = [
 const ProjectsSection: React.FC<IProjectsSectionProps> = () => {
 
     return <Box>
-        {projects.map(it => <Project project={it}/>)}
+        {projects.map(it => <Project project={it} key={it.title}/>)}
     </Box>
 }
 

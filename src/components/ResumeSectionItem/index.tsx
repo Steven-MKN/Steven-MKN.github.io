@@ -18,7 +18,7 @@ const ResumeSectionItem: React.FC<IResumeSectionItemProps> = ({item}) => {
           className={"text"}>{item.dateEnd} </Box></Box>
         <Typography variant={"h6"} sx={styles.location}>{item.location}</Typography>
 
-        <ul>{item.rolesAndAchievements.map(it => <li>{it}</li>)}</ul>
+        <ul>{item.rolesAndAchievements.map(it => <li key={it}>{it}</li>)}</ul>
       </Box>
     </Box>)
 }
