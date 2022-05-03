@@ -5,25 +5,26 @@ import {MdEmail, MdOutlinePhone} from "react-icons/md";
 import {FaWhatsapp} from "react-icons/fa";
 import {Box} from "@mui/material";
 
+const iconProps = (hover: boolean) => ({
+  color: hover? '#3c4072': '#171717'
+})
+
 const mapTypeToIcon = (type: SocialIconType, hover: boolean) => {
-  const props = {
-    color: hover? '#3c4072': '#171717'
-  }
   switch (type) {
     case "linkedin":
-      return <GrLinkedinOption {...props}/>;
+      return <GrLinkedinOption {...iconProps(hover)}/>;
     case "twitter":
-      return <GrTwitter {...props}/>;
+      return <GrTwitter {...iconProps}/>;
     case "cell":
-      return <MdOutlinePhone {...props}/>;
+      return <MdOutlinePhone {...iconProps(hover)}/>;
     case "email":
-      return <MdEmail {...props}/>;
+      return <MdEmail {...iconProps(hover)}/>;
     case "whatsapp":
-      return <FaWhatsapp {...props}/>;
+      return <FaWhatsapp {...iconProps(hover)}/>;
     case "github":
-      return <GrGithub {...props}/>;
+      return <GrGithub {...iconProps(hover)}/>;
     default:
-      return <GrCircleQuestion {...props}/>;
+      return <GrCircleQuestion {...iconProps(hover)}/>;
   }
 }
 
