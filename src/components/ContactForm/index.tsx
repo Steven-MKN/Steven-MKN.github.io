@@ -39,14 +39,14 @@ const ContactForm: React.FC<IContactFormProps> = ({}) => {
 
     const handleSubmit = async (e: any) => {
         try {
-            const isValid = await schema.validate({
-                name: form.name.value,
-                email: form.email.value,
-                subject: form.subject.value,
-                message: form.message.value
-            })
-
-            console.log(isValid)
+            // const isValid = await schema.validate({
+            //     name: form.name.value,
+            //     email: form.email.value,
+            //     subject: form.subject.value,
+            //     message: form.message.value
+            // })
+            //
+            // console.log(isValid)
             setForm((prevState) => ({
                 ...prevState,
                 submitting: true
