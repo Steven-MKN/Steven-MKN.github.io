@@ -48,3 +48,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ### To deploy
 build the application into a branch called gh-pages and push with this command `npm run deploy`,
 github will read this branch for the landing page
+
+### When dev-ing
+- the standard breakpoints are:
+```
+xs: "",
+sm: "",
+md: "",
+lg: "",
+xl: "",
+```
