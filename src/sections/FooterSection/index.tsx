@@ -1,26 +1,22 @@
-import React from "react";
-import {Box, Link, Stack, Typography} from "@mui/material";
+import React, {useContext} from "react";
+import {Link, Stack, Typography} from "@mui/material";
 import SocialLinks from "../../components/SocialLinks";
-import {SocialLinkType} from "../../components/SocialLinkButton/types";
+import {Context} from "../../Store";
+import {footerSectionSelector} from "./selectors";
 
 interface IFooterSectionProps {
 
 }
 
-const links: SocialLinkType[] = [
-    {type: "linkedin", link: "https://www.linkedin.com/in/steven1mokoena"},
-    {type: "whatsapp", link: "https://wa.me/27622995782"},
-    {type: "cell", link: "tel:+27622995782"},
-    {type: "email", link: "mailto:steventmokoena@gmail.com"},
-    {type: "github", link: "https://github.com/Steven-MKN"},
-]
-
 const FooterSection: React.FC<IFooterSectionProps> = ({}) => {
+    const state = useContext(Context);
+    const {name, slogan, socialLinks} = footerSectionSelector(state);
+
     return (
         <Stack sx={styles.main} alignItems={"center"} spacing={2}>
-            <Typography variant={"h5"}>Steven T. Mokoena</Typography>
-            <Typography variant={"body1"}>A full-stack developer with a passion to solve problems</Typography>
-            <SocialLinks links={links} />
+            <Typography variant={"h5"}>{name}</Typography>
+            <Typography variant={"body1"}>{slogan}</Typography>
+            <SocialLinks links={socialLinks} />
             <Stack>
                 <Typography variant={"caption"}>&copy; {new Date().getFullYear()} Steven Mokoena, All Rights Reserved</Typography>
                 <Typography variant={"caption"}>Designed and developed by <Link href={"https://github.com/Steven-MKN"} target={"_blank"} referrerPolicy={"no-referrer"}>Steven Mokoena</Link> </Typography>
