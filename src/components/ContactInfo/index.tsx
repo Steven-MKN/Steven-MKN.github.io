@@ -45,6 +45,16 @@ const formatValue = (info: ContactInfoType): string => {
             return info.value;
     }
 }
+
+const makeLink = (info: ContactInfoType): string | null => {
+    switch (info.type) {
+        case "location": return new URL("https://google.com/maps/place/" + info.value.replaceAll(",", "+")).toString();
+        case "cell": return "tel:" + info.value.replaceAll(" ", "");
+        case "email": return "mailto:" + info.value;
+        default: return null
+    }
+}
+
 const ContactInfo: React.FC<IContactInfoProps> = ({info}) => {
     const [hover, setHover] = useState(false)
 
@@ -56,8 +66,13 @@ const ContactInfo: React.FC<IContactInfoProps> = ({info}) => {
         setHover(false)
     }
 
+    const handleIconClick = (info: ContactInfoType) => {
+        const url = makeLink(info)
+        if (url) window.open(url, "_blank")?.focus()
+    }
+
     return <Box sx={styles.main}>
-        <Box sx={styles.icon} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <Box sx={styles.icon} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={() => handleIconClick(info)}>
             {mapToIcon(info.type, hover)}
         </Box>
         <Stack>
