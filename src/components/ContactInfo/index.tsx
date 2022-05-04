@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {Box, Stack, Typography} from "@mui/material";
 import {ContactInfoType, ContactType} from "./types";
-import {GrCircleQuestion, GrLocation} from "react-icons/gr";
-import {MdEmail, MdOutlinePhone} from "react-icons/md";
+import {GrCircleQuestion} from "react-icons/gr";
+import {MdEmail, MdOutlinePhone, MdLocationPin} from "react-icons/md";
 
 interface IContactInfoProps {
     readonly info: ContactInfoType
@@ -16,7 +16,7 @@ const iconProps = (hover: boolean) => ({
 const mapToIcon = (type: ContactType, hover: boolean) => {
     switch (type) {
         case "location":
-            return <GrLocation {...iconProps(hover)}/>;
+            return <MdLocationPin {...iconProps(hover)}/>;
         case "email":
             return <MdEmail {...iconProps(hover)}/>;
         case "cell":

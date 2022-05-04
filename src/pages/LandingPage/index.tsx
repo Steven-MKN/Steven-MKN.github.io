@@ -2,9 +2,10 @@ import React from "react";
 import HeroSection from "../../sections/HeroSection";
 import AboutSection from "../../sections/AboutSection";
 import SideNavigation from "../../components/SideNavigation";
-import { Grid } from "@mui/material";
+import {Box, Grid} from "@mui/material";
 import ProjectsSection from "../../sections/ProjectsSection";
 import ContactSection from "../../sections/ContactSection";
+import FooterSection from "../../sections/FooterSection";
 
 interface ILandingPageProps {
 }
@@ -18,6 +19,7 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
       <AboutSection/>
       <ProjectsSection />
       <ContactSection />
+      <FooterSection />
     </Grid>
   </Grid>
 }
