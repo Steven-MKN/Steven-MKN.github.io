@@ -31,7 +31,7 @@ const initState: GlobalStateType = {
                 title: 'Experience',
                 items: [
                     {
-                        title: 'Junior Software Developer',
+                        title: 'Full-Stack Software Developer',
                         dateStart: 'July 2021',
                         dateEnd: 'March 2022',
                         description: '',
@@ -43,7 +43,7 @@ const initState: GlobalStateType = {
                         ]
                     },
                     {
-                        title: 'Java Developer',
+                        title: 'Software Developer',
                         dateStart: 'April 2021',
                         dateEnd: 'August 2021',
                         description: '',
@@ -66,20 +66,20 @@ const initState: GlobalStateType = {
                         location: 'Rosebank College, Johannesburg',
                         rolesAndAchievements: [
                             'Multiple Distinction',
-                            'Cum Laude',
+                            'Class representative in 2018',
+                            'Volunteer tutor for first-year programming classes',
                             'Chess Player',
                         ]
                     },
                     {
-                        title: 'Bcom Accounting',
+                        title: 'Bcom Accounting CA(SA)',
                         dateStart: '2016',
                         dateEnd: '2017',
                         description: '',
                         location: 'University of Cape Town, Cape Town',
                         rolesAndAchievements: [
-                            'Multiple Distinction',
-                            'Cum Laude',
-                            'Chess Player',
+                            'Averaged 62%',
+                            'Incomplete due to financial constraints',
                         ]
                     }
                 ]
@@ -87,7 +87,7 @@ const initState: GlobalStateType = {
         ]
     },
     name: "Steven T. Mokoena",
-    slogan: "A full-stack developer with a passion to solve problems",
+    slogan: "A Software Engineer with a passion to solve problems",
     socialLinks: [
         {type: "linkedin", link: "https://www.linkedin.com/in/steven1mokoena"},
         {type: "whatsapp", link: "https://wa.me/27622995782"},
@@ -101,22 +101,24 @@ const initState: GlobalStateType = {
         {type: "email", value: "steventmokoena@gmail.com"},
         {type: "cell", value: "+27622995782"}
     ],
-    headline: "Full-Stack Developer",
-    projects: [{
-        title: "Insight Covid 19",
-        description: "bluh bluh bluh",
-        date: "March 2020",
-        image: {
-            url: "images/insight-covid-19.jpg",
-            altText: ""
+    headline: "Software Engineer",
+    projects: [
+        {
+            title: "Insight Covid19",
+            description: "I developed a minimal viable product app that graphed out South African covid19 stats, sends notifications to the user when new data is available and updated daily. Data used is obtained reliably from csv files from DSFSI (Data Science for Social Impact Research Group) of University of Pretoria",
+            date: "March 2020",
+            image: {
+                url: "images/insight_screenshot_poster.jpg",
+                altText: ""
+            },
+            techStack: [
+                {tech: "Java", version: "1.8"},
+                {tech: "Android", version: null},
+            ],
+            githubLink: "https://github.com/Steven-MKN/insight-covid19",
+            liveLink: "https://bit.ly/insight_v4_1",
         },
-        techStack: [
-            {tech: "Java", version: "1.8"},
-            {tech: "Android", version: null},
-        ],
-        githubLink: "https://github.com/Steven-MKN/insight-covid19",
-        liveLink: "https://bit.ly/insight_v4_1"
-    }]
+    ]
 }
 
 export const Context = React.createContext<GlobalStateType>(initState)
