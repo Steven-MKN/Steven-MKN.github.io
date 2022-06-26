@@ -6,17 +6,18 @@ import {Context} from "../../Store";
 import {projectsSectionSelector} from "./selectors";
 
 interface IProjectsSectionProps {
+    readonly projectsSectionRef: React.MutableRefObject<any>;
 }
 
-const Index: React.FC<IProjectsSectionProps> = () => {
+const ProjectsSection: React.FC<IProjectsSectionProps> = ({projectsSectionRef}) => {
     const state = useContext(Context);
     const projects = projectsSectionSelector(state);
 
-    return <Box>
+    return <Box ref={projectsSectionRef}>
         {projects.map(it => <Project project={it} key={it.title}/>)}
     </Box>
 }
 
 const styles = {}
 
-export default withFullScreenSection(Index, "Projects")
+export default withFullScreenSection(ProjectsSection, "Projects", true, "projects")

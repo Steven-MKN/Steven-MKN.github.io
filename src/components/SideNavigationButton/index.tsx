@@ -3,10 +3,11 @@ import React, {useState} from "react";
 import {NavigationButtonType} from "./types";
 
 interface ISideNavigationButtonProps {
-  readonly button: NavigationButtonType
+  readonly button: NavigationButtonType;
+  readonly isActive: boolean;
 }
 
-const SideNavigationButton: React.FC<ISideNavigationButtonProps> = ({button}) => {
+const SideNavigationButton: React.FC<ISideNavigationButtonProps> = ({button, isActive}) => {
   const [hover, setHover] = useState(false)
 
   const handleMouseEnter = () => {
@@ -21,13 +22,13 @@ const SideNavigationButton: React.FC<ISideNavigationButtonProps> = ({button}) =>
     sx={{
       ...styles.main,
       ...(hover ? styles.hover : {}),
-      ...(button.selected ? styles.hover : {})
+      ...(isActive ? styles.hover : {})
     }}
     onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
   >
     <Box component="span" sx={styles.iconWrapper}>
-      <button.Icon color={hover || button.selected? "#e7e7e7": "#171717"} size={"20px"}/>
+      <button.Icon color={hover || isActive? "#e7e7e7": "#171717"} size={"20px"}/>
     </Box>
     {/* @ts-ignore */}
     {hover && <Box component="span" sx={styles.buttonText}>{button.text}</Box>}
