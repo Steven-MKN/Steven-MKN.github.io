@@ -8,7 +8,6 @@ import ContactSection from "../../sections/ContactSection";
 import FooterSection from "../../sections/FooterSection";
 import {NavigationButtonType} from "../../components/SideNavigationButton/types";
 import {MdHome, MdInsertDriveFile, MdOutlineMailOutline, MdOutlineVerticalSplit, MdPersonOutline} from "react-icons/md";
-import useScrollSpy from 'react-use-scrollspy';
 
 interface ILandingPageProps {
 }
@@ -57,23 +56,8 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
         useRef(null),
     ]
 
-    const activeSection = useScrollSpy({
-        sectionElementRefs: sectionRefs,
-        offsetPx: -80,
-        throttleMs: 150
-    })
-
-    useEffect(() => {
-        console.log(activeSection)
-        setNavigationItems(prevState => prevState.map((it, index) => ({
-            ...it, selected: index === activeSection
-        })))
-    }, [activeSection])
-
-    console.log(activeSection)
-
     return <Grid container sx={styles.main}>
-        <SideNavigation navigationItems={navigationItems} activeSection={activeSection}/>
+        <SideNavigation navigationItems={navigationItems} activeSection={0}/>
         {/* @ts-ignore */}
         <Grid sx={styles.sectionsWrapper}>
             <HeroSection heroSectionRef={sectionRefs[0]}/>
