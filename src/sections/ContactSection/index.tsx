@@ -7,13 +7,14 @@ import {Context} from "../../Store";
 import {contactSectionSelector} from "./selectors";
 
 interface IContactSectionProps {
+    readonly contactSectionRef: React.MutableRefObject<any>;
 }
 
-const Index: React.FC<IContactSectionProps> = () => {
+const ContactSection: React.FC<IContactSectionProps> = ({contactSectionRef}) => {
     const state = useContext(Context);
     const {intro, info} = contactSectionSelector(state);
 
-    return <Box sx={styles.main}>
+    return <Box sx={styles.main} ref={contactSectionRef}>
         <Typography mt={4} textAlign={"center"} variant={"body1"}>{intro}</Typography>
         <Box sx={styles.wrapperOne}>
             <Stack sx={styles.info}>
@@ -57,4 +58,4 @@ const styles = {
     }
 }
 
-export default withFullScreenSection(Index, "Contact")
+export default withFullScreenSection(ContactSection, "Contact", true, "contact")

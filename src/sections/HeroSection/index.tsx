@@ -6,16 +6,17 @@ import {Context} from "../../Store";
 import {heroSectionSelector} from "./selectors";
 
 interface IHeroSectionProps {
+    readonly heroSectionRef: React.MutableRefObject<any>;
 }
 
-const Index: React.FC<IHeroSectionProps> = () => {
+const HeroSection: React.FC<IHeroSectionProps> = ({heroSectionRef}) => {
     const state = useContext(Context);
     const {name, headline, socialLinks} = heroSectionSelector(state);
 
     // set background image as BW when tab/window is blurred
     return (
         // @ts-ignore
-        <Box sx={styles.main}>
+        <Box sx={styles.main} ref={heroSectionRef} id={"home"}>
             {/* @ts-ignore */}
             <Box sx={styles.intro}>
                 <Typography variant={"h2"} sx={styles.heroName}>{name}</Typography>
@@ -53,4 +54,4 @@ const styles = {
     }
 }
 
-export default withFullScreenSection(Index, undefined, false)
+export default withFullScreenSection(HeroSection, undefined, false, "home")

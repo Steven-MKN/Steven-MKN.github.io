@@ -8,14 +8,16 @@ import {Context} from "../../Store";
 import {aboutSectionSelector} from "./selectors";
 
 interface IAboutSectionProps {
+  readonly aboutSectionRef: React.MutableRefObject<any>;
+  readonly resumeSectionRef: React.MutableRefObject<any>;
 }
 
-const Index: React.FC<IAboutSectionProps> = () => {
+const AboutSection: React.FC<IAboutSectionProps> = ({aboutSectionRef, resumeSectionRef}) => {
   const state = useContext(Context);
   const about = aboutSectionSelector(state);
 
   return <Box>
-    <SubSection>
+    <SubSection id={"about"} sectionRef={aboutSectionRef}>
       {
         /* @ts-ignore */
         about.about.map(it => <Typography variant={"body1"} sx={styles.about} key={it}>{it}</Typography>)
@@ -27,7 +29,7 @@ const Index: React.FC<IAboutSectionProps> = () => {
         {about.skills.map(it => <SkillBadge skill={it} key={it.skill} />)}
       </Box>
     </SubSection>
-    <SubSection title={"Resume"}>
+    <SubSection title={"Resume"} id={"resume"} sectionRef={resumeSectionRef}>
       {/* @ts-ignore */}
       <Box sx={styles.resume}>
         <Resume resume={about.resume}/>
@@ -51,4 +53,4 @@ const styles = {
   }
 }
 
-export default withFullScreenSection(Index, "About Me")
+export default withFullScreenSection(AboutSection, "About Me", true, "about")

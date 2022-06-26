@@ -1,39 +1,101 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import HeroSection from "../../sections/HeroSection";
 import AboutSection from "../../sections/AboutSection";
 import SideNavigation from "../../components/SideNavigation";
-import {Box, Grid} from "@mui/material";
+import {Grid} from "@mui/material";
 import ProjectsSection from "../../sections/ProjectsSection";
 import ContactSection from "../../sections/ContactSection";
 import FooterSection from "../../sections/FooterSection";
+import {NavigationButtonType} from "../../components/SideNavigationButton/types";
+import {MdHome, MdInsertDriveFile, MdOutlineMailOutline, MdOutlineVerticalSplit, MdPersonOutline} from "react-icons/md";
+import useScrollSpy from 'react-use-scrollspy';
 
 interface ILandingPageProps {
 }
 
+const _navigationItems: NavigationButtonType[] = [
+    {
+        Icon: MdHome,
+        text: 'Home',
+        relativeRoute: '#home',
+        selected: false,
+    },
+    {
+        Icon: MdPersonOutline,
+        text: 'About Me',
+        relativeRoute: '#about',
+        selected: false,
+    },
+    {
+        Icon: MdInsertDriveFile,
+        text: 'Resume',
+        relativeRoute: '#resume',
+        selected: false,
+    },
+    {
+        Icon: MdOutlineVerticalSplit,
+        text: 'Projects',
+        relativeRoute: '#projects',
+        selected: false,
+    },
+    {
+        Icon: MdOutlineMailOutline,
+        text: 'Contact Me',
+        relativeRoute: '#contact',
+        selected: false,
+    }
+]
+
 const LandingPage: React.FC<ILandingPageProps> = () => {
-  return <Grid container sx={styles.main}>
-    <SideNavigation/>
-    {/* @ts-ignore */}
-    <Grid sx={styles.sectionsWrapper}>
-      <HeroSection/>
-      <AboutSection/>
-      <ProjectsSection />
-      <ContactSection />
-      <FooterSection />
+    const [navigationItems, setNavigationItems] = useState(_navigationItems);
+
+    const sectionRefs = [
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+    ]
+
+    const activeSection = useScrollSpy({
+        sectionElementRefs: sectionRefs,
+        offsetPx: -80,
+        throttleMs: 150
+    })
+
+    useEffect(() => {
+        console.log(activeSection)
+        setNavigationItems(prevState => prevState.map((it, index) => ({
+            ...it, selected: index === activeSection
+        })))
+    }, [activeSection])
+
+    console.log(activeSection)
+
+    return <Grid container sx={styles.main}>
+        <SideNavigation navigationItems={navigationItems} activeSection={activeSection}/>
+        {/* @ts-ignore */}
+        <Grid sx={styles.sectionsWrapper}>
+            <HeroSection heroSectionRef={sectionRefs[0]}/>
+            <AboutSection aboutSectionRef={sectionRefs[1]} resumeSectionRef={sectionRefs[2]}/>
+            <ProjectsSection projectsSectionRef={sectionRefs[3]}/>
+            <ContactSection contactSectionRef={sectionRefs[4]}/>
+            <FooterSection/>
+        </Grid>
     </Grid>
-  </Grid>
 }
 
 const styles = {
-  main: {
-    height: '100vh',
-    overflow: 'hidden'
-  },
-  sectionsWrapper: {
-    overflowY: 'scroll',
-    zIndex: 300,
-    height: '100%'
-  }
+    main: {
+        height: '100vh',
+        overflow: 'hidden'
+    },
+    sectionsWrapper: {
+        overflowY: 'scroll',
+        zIndex: 300,
+        height: '100%',
+        scrollBehavior: 'smooth'
+    }
 }
 
 export default LandingPage
