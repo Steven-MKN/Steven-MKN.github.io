@@ -6,7 +6,7 @@ const initState: GlobalStateType = {
     aboutText: [
         'I have a diploma in software development with Rosebank College. Currently, I work for Lipa Payments on contract and have experience with React, React Native, Spring, MongoDB, MySQL, CI/CD and Microservices.',
         'I completed my matric in 2015 with distinctions in accounting and pure maths. I went to study BCom Accounting at UCT (University of Cape Town). In 2018, I could not settle my previous years fees, and was forced to postpone my studies. I then decided to study Software Development at Rosebank College (the fees were much more affordable). I have since begun to love software development.',
-        'My goal is to grow as a software developer so that I can lead large projects. I continue to grow on a daily basis, be it learning about how to improve my architectures, application security or continuous deployment pipelines.'
+        'My goal is to grow as a software engineer so that I can lead large projects. I continue to grow on a daily basis, be it learning about how to improve my architectures, application security or continuous deployment pipelines.'
     ],
     skills: [
         {skill: 'TypeScript', level: 'advanced'},
@@ -104,7 +104,7 @@ const initState: GlobalStateType = {
             }
         ]
     },
-    name: "Steven T. Mokoena",
+    name: "Steven Mokoena",
     slogan: "A Software Engineer with a passion to solve problems",
     socialLinks: [
         {type: "linkedin", link: "https://www.linkedin.com/in/steven1mokoena"},

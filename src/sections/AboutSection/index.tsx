@@ -46,7 +46,7 @@ const styles = {
     justifyContent: "center"
   },
   about: {
-
+    marginBottom: 3,
   },
   resume: {
 

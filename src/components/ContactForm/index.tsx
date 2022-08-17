@@ -38,6 +38,7 @@ const ContactForm: React.FC<IContactFormProps> = ({}) => {
     });
 
     const handleSubmit = async (e: any) => {
+        return
         try {
             // const isValid = await schema.validate({
             //     name: form.name.value,
