@@ -19,10 +19,6 @@ const initState: GlobalStateType = {
         {skill: 'SQL', level: 'intermediate'},
         {skill: 'Java', level: 'intermediate'},
         {skill: 'REST API', level: 'intermediate'},
-        {skill: 'Kubernetes', level: 'basic'},
-        {skill: 'MongoDB', level: 'basic'},
-        {skill: 'Docker', level: 'basic'},
-        {skill: 'CI/CD', level: 'basic'},
     ],
     resume: {
         summary: '',
@@ -30,6 +26,18 @@ const initState: GlobalStateType = {
             {
                 title: 'Experience',
                 items: [
+                    {
+                        title: 'Software Engineer',
+                        dateStart: 'May 2022',
+                        dateEnd: 'Current',
+                        description: '',
+                        location: 'Synthesis Software Technologies, Johannesburg',
+                        rolesAndAchievements: [
+                            'Helping a global bank make its move to digital banking',
+                            'Responsible for building a React Native application used for banking',
+                            'Ensuring compliance with PCI DSS and the banks internal standards/policies'
+                        ]
+                    },
                     {
                         title: 'Full-Stack Software Developer',
                         dateStart: 'July 2021',
@@ -58,6 +66,16 @@ const initState: GlobalStateType = {
             {
                 title: 'Education',
                 items: [
+                    {
+                        title: 'Advanced Diploma in Computer Science',
+                        dateStart: '2022',
+                        dateEnd: 'Current',
+                        description: '',
+                        location: 'Tshwane University of Technology, Pretoria',
+                        rolesAndAchievements: [
+                            'Studying part-time'
+                        ]
+                    },
                     {
                         title: 'Diploma in Information Technology - Software Development',
                         dateStart: '2018',
