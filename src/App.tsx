@@ -5,19 +5,22 @@ import ProjectPage from "./pages/ProjectPage";
 import useInitAppHooks from "./hooks/useInitAppHooks";
 import {ThemeProvider} from "@mui/material";
 import useAppTheme from "./hooks/useAppTheme";
+import Store from "./Store";
 
 function App() {
   useInitAppHooks();
   const theme = useAppTheme();
   return (
-    <ThemeProvider theme={theme}>
-        <BrowserRouter>
-            <Routes>
-                <Route path={"/"} element={<LandingPage/>}/>
-                <Route path={"/project"} element={<ProjectPage/>}/>
-            </Routes>
-        </BrowserRouter>
-    </ThemeProvider>
+    <Store>
+        <ThemeProvider theme={theme}>
+            <BrowserRouter>
+                <Routes>
+                    <Route path={"/"} element={<LandingPage/>}/>
+                    <Route path={"/project"} element={<ProjectPage/>}/>
+                </Routes>
+            </BrowserRouter>
+        </ThemeProvider>
+    </Store>
   );
 }
 
