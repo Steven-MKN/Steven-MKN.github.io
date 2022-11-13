@@ -1,26 +1,34 @@
 import React from "react";
-import {Box, Typography} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
-const SubSection: React.FC<{title?: string, id?: string, sectionRef?: React.MutableRefObject<any>}> = ({children, title, id, sectionRef}) => {
-  return <Box sx={styles.main} id={id} ref={sectionRef}>
-    {title && <Typography variant={"h2"} sx={styles.subTitle}>{title}</Typography>}
-    <Box sx={styles.content}>
-      {children}
+const SubSection: React.FC<{
+  title?: string;
+  id?: string;
+  sectionRef?: React.MutableRefObject<any>;
+}> = ({ children, title, id, sectionRef }) => {
+  return (
+    <Box sx={styles.main} id={id} ref={sectionRef}>
+      {title && (
+        <Typography variant={"h2"} sx={styles.subTitle}>
+          {title}
+        </Typography>
+      )}
+      <Box sx={styles.content}>{children}</Box>
     </Box>
-  </Box>
-}
+  );
+};
 
 const styles = {
   main: {
-    paddingLeft: '10px',
-    paddingRight: '50px',
+    paddingLeft: "10px",
+    paddingRight: "50px",
   },
   content: {
-    paddingLeft: "8px"
+    paddingLeft: "8px",
   },
   subTitle: {
-    marginTop: "32px"
-  }
-}
+    marginTop: "32px",
+  },
+};
 
-export default SubSection
+export default SubSection;

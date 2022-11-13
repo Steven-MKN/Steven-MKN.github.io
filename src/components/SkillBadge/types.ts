@@ -1,10 +1,10 @@
 export type SkillBadgeType = {
   skill: SkillType;
   level: string;
-}
+};
 
 export type SkillType =
-  "JavaScript"
+  | "JavaScript"
   | "TypeScript"
   | "Kotlin"
   | "React"
@@ -19,4 +19,8 @@ export type SkillType =
   | "MongoDB"
   | "REST API"
   | "Kubernetes"
-  | "Docker"
+  | "Docker";
+
+export type SkillBadgeIconPropsType = {
+  size: `${number}px`;
+};

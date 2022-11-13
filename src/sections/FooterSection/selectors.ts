@@ -1,13 +1,16 @@
-import {GlobalStateType} from "../../Store/types";
-import {createSelector} from 'reselect';
-import {FooterSectionType} from "./types";
+import { GlobalStateType } from "../../Store/types";
+import { createSelector } from "reselect";
+import { FooterSectionType } from "./types";
 
-const state = (globalState: GlobalStateType) => globalState
+const state = (globalState: GlobalStateType) => globalState;
 
-export const footerSectionSelector = createSelector(state, (s): FooterSectionType => {
+export const footerSectionSelector = createSelector(
+  state,
+  (s): FooterSectionType => {
     return {
-        name: s.name,
-        slogan: s.slogan,
-        socialLinks: s.socialLinks,
-    }
-})
+      name: s.name,
+      slogan: s.slogan,
+      socialLinks: s.socialLinks,
+    };
+  }
+);

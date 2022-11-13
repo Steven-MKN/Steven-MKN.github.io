@@ -1,3 +1,3 @@
-import {ProjectType} from "../../components/Project/types";
+import { ProjectType } from "../../components/Project/types";
 
-export type ProjectsSectionType = ProjectType[]
+export type ProjectsSectionType = ProjectType[];

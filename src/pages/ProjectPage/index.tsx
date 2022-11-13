@@ -1,11 +1,10 @@
 import React from "react";
-import {Box} from "@mui/material";
+import { Box } from "@mui/material";
 
-interface IProjectPageProps {
-}
+interface IProjectPageProps {}
 
 const ProjectPage: React.FC<IProjectPageProps> = () => {
-  return <Box>project page</Box>
-}
+  return <Box>project page</Box>;
+};
 
-export default ProjectPage
+export default ProjectPage;

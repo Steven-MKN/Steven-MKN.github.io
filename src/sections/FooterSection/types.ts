@@ -1,7 +1,7 @@
-import {SocialLinkType} from "../../components/SocialLinkButton/types";
+import { SocialLinkType } from "../../components/SocialLinkButton/types";
 
 export type FooterSectionType = {
-    readonly name: string;
-    readonly slogan: string;
-    readonly socialLinks: SocialLinkType[];
-}
+  readonly name: string;
+  readonly slogan: string;
+  readonly socialLinks: SocialLinkType[];
+};

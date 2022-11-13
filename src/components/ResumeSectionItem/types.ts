@@ -5,4 +5,4 @@ export type ResumeSectionItemType = {
   readonly location: string;
   readonly description: string;
   readonly rolesAndAchievements: string[];
-}
+};
