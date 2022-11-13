@@ -6,6 +6,7 @@
 - [ ] setup color scheme with dark mode
 - [ ] setup animations with react spring
 - [ ] change architecture to MVC (or something like)
+- [ ] upgrade to latest react
 - [ ] create components for UI elements
 - [ ] redesign UI with terminal style
 - [ ] create working form
