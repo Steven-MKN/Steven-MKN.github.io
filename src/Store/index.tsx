@@ -9,16 +9,13 @@ const initState: GlobalStateType = {
     "My goal is to grow as a software engineer so that I can lead large projects. I continue to grow on a daily basis, be it learning about how to improve my architectures, application security or continuous deployment pipelines.",
   ],
   skills: [
-    { skill: "TypeScript", level: "advanced" },
-    { skill: "Git", level: "advanced" },
-    { skill: "React", level: "intermediate" },
-    { skill: "React Native", level: "intermediate" },
-    { skill: "Spring", level: "intermediate" },
-    { skill: "Kotlin", level: "intermediate" },
-    { skill: "SDLC", level: "intermediate" },
-    { skill: "SQL", level: "intermediate" },
-    { skill: "Java", level: "intermediate" },
-    { skill: "REST API", level: "intermediate" },
+    { skill: "React Native" },
+    { skill: "Mobile Security" },
+    { skill: "TypeScript" },
+    { skill: "Mobile CI/CD" },
+    { skill: "Firebase" },
+    { skill: "SDLC" },
+    { skill: ".NET" },
   ],
   resume: {
     summary: "",
@@ -27,7 +24,7 @@ const initState: GlobalStateType = {
         title: "Experience",
         items: [
           {
-            title: "Software Engineer",
+            title: "Software Developer",
             dateStart: "May 2022",
             dateEnd: "Current",
             description: "",
@@ -37,6 +34,20 @@ const initState: GlobalStateType = {
               "Responsible for building a React Native application used for banking",
               "Ensuring compliance with PCI DSS and the banks internal standards/policies",
             ],
+            skills: [
+              { skill: "React Native" },
+              { skill: "Mobile Security" },
+              { skill: "TypeScript" },
+              { skill: "Mobile CI/CD" },
+              { skill: "SDLC" },
+              { skill: ".NET" },
+              { skill: "Java" },
+              { skill: "Objective-C" },
+              { skill: "Firebase" },
+              { skill: "C#" },
+              { skill: "MySQL" },
+              { skill: "Microservices" },
+            ]
           },
           {
             title: "Full-Stack Software Developer",
@@ -49,6 +60,20 @@ const initState: GlobalStateType = {
               "Developed React Dashboard used by tenants to Lipa",
               "Developed a Microservices backend to manage and interact with all our client applications",
             ],
+            skills: [
+              { skill: "React Native" },
+              { skill: "Mobile Security" },
+              { skill: "TypeScript" },
+              { skill: "Mobile CI/CD" },
+              { skill: "SDLC" },
+              { skill: ".NET" },
+              { skill: "Java" },
+              { skill: "Kotlin" },
+              { skill: "Spring" },
+              { skill: "React" },
+              { skill: "MongoDB" },
+              { skill: "CI/CD" },
+            ]
           },
           {
             title: "Software Developer",
@@ -60,7 +85,14 @@ const initState: GlobalStateType = {
               "Developed chatbot used for administration of saving groups",
               "Developed REST API for dashboard used to manage saving groups",
             ],
+            skills: [
+              { skill: "Spring" },
+              { skill: "Java" },
+              { skill: "PostgreSQL" },
+              { skill: "Vue" }
+            ]
           },
+
         ],
       },
       {
@@ -72,7 +104,8 @@ const initState: GlobalStateType = {
             dateEnd: "Current",
             description: "",
             location: "Tshwane University of Technology, Pretoria",
-            rolesAndAchievements: ["Studying part-time"],
+            rolesAndAchievements: ["Studying part-time towards this qualification"],
+            skills: []
           },
           {
             title: "Diploma in Information Technology - Software Development",
@@ -81,11 +114,12 @@ const initState: GlobalStateType = {
             description: "",
             location: "Rosebank College, Johannesburg",
             rolesAndAchievements: [
-              "Multiple Distinction",
+              "Completed with Distinction",
               "Class representative in 2018",
               "Volunteer tutor for first-year programming classes",
               "Chess Player",
             ],
+            skills: []
           },
           {
             title: "Bcom Accounting CA(SA)",
@@ -97,6 +131,7 @@ const initState: GlobalStateType = {
               "Averaged 62%",
               "Incomplete due to financial constraints",
             ],
+            skills: []
           },
         ],
       },

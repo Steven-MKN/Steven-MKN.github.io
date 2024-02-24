@@ -24,7 +24,7 @@ const LandingPage: React.FC<ILandingPageProps> = () => {
           resumeSectionRef={sectionRefs[2]}
         />
         <ProjectsSection projectsSectionRef={sectionRefs[3]} />
-        <ContactSection contactSectionRef={sectionRefs[4]} />
+        {/* <ContactSection contactSectionRef={sectionRefs[4]} /> */}
         <FooterSection />
       </Grid>
     </Grid>

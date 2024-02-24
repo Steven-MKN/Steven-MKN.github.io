@@ -1,6 +1,7 @@
 import React from "react";
 import { ResumeSectionItemType } from "./types";
 import { Box, Typography } from "@mui/material";
+import SkillBadge from "../SkillBadge";
 
 interface IResumeSectionItemProps {
   readonly item: ResumeSectionItemType;
@@ -36,6 +37,12 @@ const ResumeSectionItem: React.FC<IResumeSectionItemProps> = ({ item }) => {
             <li key={it}>{it}</li>
           ))}
         </ul>
+
+        <Box sx={styles.skills}>
+          {item.skills.map((it) => (
+            <SkillBadge skill={it} key={it.skill} size={"small"} />
+          ))}
+        </Box>
       </Box>
     </Box>
   );
@@ -82,6 +89,13 @@ const styles = {
   location: {
     marginTop: "6px",
     marginBottom: "8px",
+  },
+  skills: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "start",
+    paddingLeft: "16px"
   },
 };
 

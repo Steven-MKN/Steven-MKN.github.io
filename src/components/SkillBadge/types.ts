@@ -1,6 +1,6 @@
 export type SkillBadgeType = {
   skill: SkillType;
-  level: string;
+  level?: string;
 };
 
 export type SkillType =
@@ -12,6 +12,7 @@ export type SkillType =
   | "Spring"
   | "Java"
   | "CI/CD"
+  | "Mobile CI/CD"
   | "Microservices"
   | "Git"
   | "SDLC"
@@ -19,7 +20,17 @@ export type SkillType =
   | "MongoDB"
   | "REST API"
   | "Kubernetes"
-  | "Docker";
+  | "Docker"
+  | ".NET"
+  | "C#"
+  | "Mobile Security"
+  | "Objective-C"
+  | "Swift"
+  | "Firebase"
+  | "MySQL"
+  | "PostgreSQL"
+  | "T-SQL"
+  | "Vue";
 
 export type SkillBadgeIconPropsType = {
   size: `${number}px`;

@@ -31,7 +31,7 @@ const AboutSection: React.FC<IAboutSectionProps> = ({
           ))
         }
       </SubSection>
-      <SubSection title={"Skills"}>
+      <SubSection title={"Top Skills"}>
         {/* @ts-ignore */}
         <Box sx={styles.skills}>
           {about.skills.map((it) => (

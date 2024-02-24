@@ -20,7 +20,7 @@ const FooterSection: React.FC<IFooterSectionProps> = () => {
           &copy; {new Date().getFullYear()} Steven Mokoena, All Rights Reserved
         </Typography>
         <Typography variant={"caption"}>
-          Designed and developed by{" "}
+          Designed and developed with ❤️ by{" "}
           <Link
             href={"https://github.com/Steven-MKN"}
             target={"_blank"}

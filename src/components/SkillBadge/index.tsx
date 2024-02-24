@@ -1,25 +1,30 @@
-import React from "react";
-import { SkillBadgeType } from "./types";
 import { Box } from "@mui/material";
-import UseSkillBadge from "./useSkillBadge";
+import React from "react";
 import { mapSkillToIcon } from "./index.helper";
+import { SkillBadgeType } from "./types";
+import useSkillBadge from "./useSkillBadge";
 
 interface ISkillBadgeProps {
   readonly skill: SkillBadgeType;
+  readonly size?: "small" | "large";
 }
 
-const SkillBadge: React.FC<ISkillBadgeProps> = ({ skill }) => {
-  const { iconProps } = UseSkillBadge();
+const SkillBadge: React.FC<ISkillBadgeProps> = ({ skill, size = "large" }) => {
+  const { iconProps } = useSkillBadge(size);
   return (
     // @ts-ignore
-    <Box component="span" sx={styles.main}>
+    <Box component="span" sx={styles.main} padding={size == "small" ? "2px 16px 16px 2px" : "14px 20px 28px 20px"}>
       {mapSkillToIcon(iconProps, skill.skill)}
-      <Box component="span" className={"text"} sx={styles.skillText}>
+      <Box component="span" className={"text"} fontSize={size == "small" ? 12 : 14}>
         {skill.skill}
       </Box>
-      <Box component="span" className={"text"} sx={styles.levelText}>
+      {
+        skill.level ? (
+          <Box component="span" className={"text"} fontSize={size == "small" ? 12 : 14}>
         ({skill.level})
       </Box>
+        ) : null
+      }
     </Box>
   );
 };
@@ -29,13 +34,6 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    padding: "14px 20px 28px 20px ",
-  },
-  skillText: {
-    fontSize: 14,
-  },
-  levelText: {
-    fontSize: 12,
   },
 };
 
