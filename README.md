@@ -15,7 +15,7 @@
 - [ ] add simple tests (to pipeline too)
 
 ### To deploy
-build the application into a branch called gh-pages and push with this command `npm run deploy`,
+run `npm run deploy`, this will build the project and push to the `gh-pages` branch,
 github will read this branch for the landing page
 
 ### When dev-ing
