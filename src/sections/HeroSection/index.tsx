@@ -22,7 +22,7 @@ const HeroSection: React.FC<IHeroSectionProps> = ({ heroSectionRef }) => {
         <Typography variant={"h2"} sx={styles.heroName}>
           {name}
         </Typography>
-        <Typography variant={"h3"}>{headline}</Typography>
+        <Typography variant={"h6"}>{headline}_</Typography>
         <SocialLinks links={socialLinks} />
       </Box>
     </Box>

@@ -33,12 +33,6 @@ const _navigationItems: NavigationButtonType[] = [
     relativeRoute: "#projects",
     selected: false,
   },
-  {
-    Icon: MdOutlineMailOutline,
-    text: "Contact Me",
-    relativeRoute: "#contact",
-    selected: false,
-  },
 ];
 
 const useLandingPage = () => {

@@ -30,7 +30,14 @@ export type SkillType =
   | "MySQL"
   | "PostgreSQL"
   | "T-SQL"
-  | "Vue";
+  | "Vue"
+  | "Scrum"
+  | "Kanban"
+  | "Android"
+  | "iOS"
+  | "Windows"
+  | "Vault"
+  | "Cognito";
 
 export type SkillBadgeIconPropsType = {
   size: `${number}px`;

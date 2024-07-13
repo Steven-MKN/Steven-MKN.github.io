@@ -6,12 +6,12 @@ import { Grid } from "@mui/material";
 import ProjectsSection from "../../sections/ProjectsSection";
 import ContactSection from "../../sections/ContactSection";
 import FooterSection from "../../sections/FooterSection";
-import UseLandingPage from "./useLandingPage";
+import useLandingPage from "./useLandingPage";
 
 interface ILandingPageProps {}
 
 const LandingPage: React.FC<ILandingPageProps> = () => {
-  const { navigationItems, sectionRefs } = UseLandingPage();
+  const { navigationItems, sectionRefs } = useLandingPage();
 
   return (
     <Grid container sx={styles.main}>

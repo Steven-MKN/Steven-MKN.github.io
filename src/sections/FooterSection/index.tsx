@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
 import { Link, Stack, Typography } from "@mui/material";
-import SocialLinks from "../../components/SocialLinks";
+import React, { useContext } from "react";
 import { Context } from "../../Store";
+import SocialLinks from "../../components/SocialLinks";
 import { footerSectionSelector } from "./selectors";
 
 interface IFooterSectionProps {}
@@ -20,7 +20,7 @@ const FooterSection: React.FC<IFooterSectionProps> = () => {
           &copy; {new Date().getFullYear()} Steven Mokoena, All Rights Reserved
         </Typography>
         <Typography variant={"caption"}>
-          Designed and developed with ❤️ by{" "}
+          Designed and developed by{" "}
           <Link
             href={"https://github.com/Steven-MKN"}
             target={"_blank"}

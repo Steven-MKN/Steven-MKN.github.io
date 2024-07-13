@@ -1,16 +1,18 @@
+import { Typography } from "@mui/material";
 import { AiOutlineApi } from "react-icons/ai";
+import { BiColumns, BiNetworkChart } from "react-icons/bi";
 import { DiCode, DiDatabase, DiGitPullRequest, DiPostgresql } from "react-icons/di";
+import { FaAndroid, FaAppStoreIos, FaAws, FaJava, FaVuejs } from "react-icons/fa";
+import { GoIterations } from "react-icons/go";
 import { GrPowerCycle } from "react-icons/gr";
-import { IoInfinite } from "react-icons/io5";
+import { IoInfinite, IoLogoWindows } from "react-icons/io5";
 import { MdOutlineSecurity } from "react-icons/md";
 import { RiReactjsLine } from "react-icons/ri";
-import { BiNetworkChart } from "react-icons/bi";
 import {
   SiCsharp,
   SiDocker,
   SiDotnet,
   SiFirebase,
-  SiJava,
   SiJavascript,
   SiKotlin,
   SiKubernetes,
@@ -20,9 +22,9 @@ import {
   SiSpring,
   SiSwift,
   SiTypescript,
+  SiVault,
 } from "react-icons/si";
 import { SkillBadgeIconPropsType, SkillType } from "./types";
-import { FaVuejs } from "react-icons/fa";
 
 export const mapSkillToIcon = (
   iconProps: SkillBadgeIconPropsType,
@@ -30,7 +32,7 @@ export const mapSkillToIcon = (
 ) => {
   switch (skill) {
     case "Java":
-      return <SiJava {...iconProps} />;
+      return <FaJava {...iconProps} />;
     case "React":
       return <SiReact {...iconProps} />;
     case "JavaScript":
@@ -63,26 +65,40 @@ export const mapSkillToIcon = (
     case "Kubernetes":
       return <SiKubernetes {...iconProps} />;
     case "Mobile Security":
-      return <MdOutlineSecurity {...iconProps} />
+      return <MdOutlineSecurity {...iconProps} />;
     case "CI/CD":
     case "Mobile CI/CD":
       return <IoInfinite {...iconProps} />;
     case ".NET":
-      return <SiDotnet {...iconProps} />
+      return <SiDotnet {...iconProps} />;
     case "C#":
-      return <SiCsharp {...iconProps} />
+      return <SiCsharp {...iconProps} />;
     case "REST API":
       return <AiOutlineApi {...iconProps} />;
     case "Mobile Security":
       return <MdOutlineSecurity {...iconProps} />;
     case "Swift":
-      return <SiSwift {...iconProps} />
+      return <SiSwift {...iconProps} />;
     case "Objective-C":
-      return "OBJ-C";
+      return <Typography {...iconProps}>OBJ-C</Typography>;
     case "Firebase":
-      return <SiFirebase {...iconProps} />
+      return <SiFirebase {...iconProps} />;
     case "Vue":
-      return <FaVuejs {...iconProps} />
+      return <FaVuejs {...iconProps} />;
+    case "Scrum":
+      return <GoIterations {...iconProps} />;
+    case "Kanban":
+      return <BiColumns {...iconProps} />;
+    case "Android":
+      return <FaAndroid {...iconProps} />;
+    case "iOS":
+      return <FaAppStoreIos {...iconProps} />;
+    case "Windows":
+      return <IoLogoWindows {...iconProps} />;
+    case "Vault":
+      return <SiVault {...iconProps} />;
+    case "Cognito":
+      return <FaAws {...iconProps} />;
     default:
       return <DiCode {...iconProps} />;
   }

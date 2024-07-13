@@ -1,16 +1,11 @@
 import { TechItemPropType, TechType } from "./types";
 import React from "react";
-import { SiJava } from "react-icons/si";
-import { DiCode } from "react-icons/di";
+import { mapSkillToIcon } from "../SkillBadge/index.helper";
+import { SkillType } from "../SkillBadge/types";
 
 export const mapTechIcon = (
   iconProps: TechItemPropType,
   tech: TechType
 ): React.ReactElement => {
-  switch (tech) {
-    case "Java":
-      return <SiJava {...iconProps} />;
-    default:
-      return <DiCode {...iconProps} />;
-  }
+  return mapSkillToIcon(iconProps, tech as SkillType);
 };

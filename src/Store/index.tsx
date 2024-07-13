@@ -6,7 +6,7 @@ const initState: GlobalStateType = {
   aboutText: [
     "I have a diploma in software development with Rosebank College. Currently, I work for Lipa Payments on contract and have experience with React, React Native, Spring, MongoDB, MySQL, CI/CD and Microservices.",
     "I completed my matric in 2015 with distinctions in accounting and pure maths. I went to study BCom Accounting at UCT (University of Cape Town). In 2018, I could not settle my previous years fees, and was forced to postpone my studies. I then decided to study Software Development at Rosebank College (the fees were much more affordable). I have since begun to love software development.",
-    "My goal is to grow as a software engineer so that I can lead large projects. I continue to grow on a daily basis, be it learning about how to improve my architectures, application security or continuous deployment pipelines.",
+    "My goal is to grow as a software developer so that I can lead large projects. I continue to grow on a daily basis, be it learning about how to improve my architectures, application security or continuous deployment pipelines.",
   ],
   skills: [
     { skill: "React Native" },
@@ -21,7 +21,7 @@ const initState: GlobalStateType = {
     summary: "",
     sections: [
       {
-        title: "Experience",
+        title: "Professional Experience",
         items: [
           {
             title: "Software Developer",
@@ -30,9 +30,7 @@ const initState: GlobalStateType = {
             description: "",
             location: "Synthesis Software Technologies, Johannesburg",
             rolesAndAchievements: [
-              "Helping a global bank make its move to digital banking",
-              "Responsible for building a React Native application used for banking",
-              "Ensuring compliance with PCI DSS and the banks internal standards/policies",
+              "Respo"
             ],
             skills: [
               { skill: "React Native" },
@@ -47,6 +45,8 @@ const initState: GlobalStateType = {
               { skill: "C#" },
               { skill: "MySQL" },
               { skill: "Microservices" },
+              { skill: "Kanban" },
+              { skill: "Scrum" },
             ]
           },
           {
@@ -56,9 +56,9 @@ const initState: GlobalStateType = {
             description: "",
             location: "Lipa Payments, Remote",
             rolesAndAchievements: [
-              "Developed React Native app that integrates in-house Bluetooth SDK and NFC SDK",
-              "Developed React Dashboard used by tenants to Lipa",
-              "Developed a Microservices backend to manage and interact with all our client applications",
+              "Responsible for building the mobile apps that are currently used as the payment solution that the startup envisioned",
+              "Contributed to buildingAPIs that  form part of the core system",
+              "Contributed to piloting a solution that won the startup R10 million in investment funding"
             ],
             skills: [
               { skill: "React Native" },
@@ -66,13 +66,14 @@ const initState: GlobalStateType = {
               { skill: "TypeScript" },
               { skill: "Mobile CI/CD" },
               { skill: "SDLC" },
-              { skill: ".NET" },
               { skill: "Java" },
               { skill: "Kotlin" },
               { skill: "Spring" },
               { skill: "React" },
               { skill: "MongoDB" },
               { skill: "CI/CD" },
+              { skill: "Microservices" },
+              { skill: "Scrum" },
             ]
           },
           {
@@ -82,17 +83,35 @@ const initState: GlobalStateType = {
             description: "",
             location: "Sizanani Technologies, Remote",
             rolesAndAchievements: [
-              "Developed chatbot used for administration of saving groups",
-              "Developed REST API for dashboard used to manage saving groups",
+              "As the sole developer, responsible for building and launching the chatbot, backend APIs and web console used by savings groups and internal admins to manage the complicated methodology used to save, authorise withdrawals and deposit, and distribute money",
+              "This solution directly resulted in newly formed partnerships and funding for further development of the solution"
             ],
             skills: [
               { skill: "Spring" },
               { skill: "Java" },
               { skill: "PostgreSQL" },
-              { skill: "Vue" }
+              { skill: "Vue" },
+              { skill: "JavaScript" },
+              { skill: "Kanban" },
             ]
           },
-
+          {
+            title: "Web Development Tutor",
+            dateStart: "December 2020",
+            dateEnd: "Jun 2021",
+            description: "",
+            location: "Zaio Technology, Remote",
+            rolesAndAchievements: [
+              "Developed course material for React and React Native courses to be curated by an instructor",
+              "Provided OnDemand assistance to subscribers",
+              "Developed a very impressive React landing page"
+            ],
+            skills: [
+              { skill: "React" },
+              { skill: "React Native" },
+              { skill: "JavaScript" },
+            ]
+          },
         ],
       },
       {
@@ -138,7 +157,7 @@ const initState: GlobalStateType = {
     ],
   },
   name: "Steven Mokoena",
-  slogan: "A Software Engineer with a passion to solve problems",
+  slogan: "A Software Developer with a passion to solve problems",
   socialLinks: [
     { type: "linkedin", link: "https://www.linkedin.com/in/steven1mokoena" },
     { type: "whatsapp", link: "https://wa.me/27622995782" },
@@ -153,7 +172,7 @@ const initState: GlobalStateType = {
     { type: "email", value: "steventmokoena@gmail.com" },
     { type: "cell", value: "+27622995782" },
   ],
-  headline: "Software Engineer",
+  headline: "Software Developer",
   projects: [
     {
       title: "Insight Covid19",
@@ -170,6 +189,27 @@ const initState: GlobalStateType = {
       ],
       githubLink: "https://github.com/Steven-MKN/insight-covid19",
       liveLink: "https://bit.ly/insight_v4_1",
+    },
+    {
+      title: "Passwordless Authentication",
+      description:
+        "...",
+      date: "March 2024",
+      image: {
+        url: "images/abc.jpg",
+        altText: "",
+      },
+      techStack: [
+        { tech: "Java", version: "1.8" },
+        { tech: "Android", version: null },
+        { tech: "iOS", version: null },
+        { tech: "React Native", version: "0.73" },
+        { tech: "Cognito", version: null },
+        { tech: "Vault", version: null },
+        { tech: "Objective-C", version: null },
+      ],
+      githubLink: "",
+      liveLink: "",
     },
   ],
 };
