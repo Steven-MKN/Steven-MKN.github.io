@@ -27,10 +27,15 @@ const initState: GlobalStateType = {
             title: "Software Developer",
             dateStart: "May 2022",
             dateEnd: "Current",
-            description: "",
+            description: "As a software developer, I have been responsible for building banking mobile application for a client that is modernizing their digital solutions",
             location: "Synthesis Software Technologies, Johannesburg",
             rolesAndAchievements: [
-              "Respo"
+              "Implementing and maintaining the React Native codebase in Typescript, including ",
+              "Ensuring the eventual native applications (android and iOS) are secure from known vulnerabilities,",
+              "Getting involved in technical refinement sessions, understanding the technical implications and how to implement features or changes,",
+              "Creating and managing the Play store and App store releases,",
+              "Creating and maintaining the mobile CI/CD on Bitrise with deployments via the respective stores for prod, and via Firebase App Tester",
+              "Done a bit of work with dotnet, C# and MySQL for supporting features needed on the mobile app",
             ],
             skills: [
               { skill: "React Native" },
@@ -53,11 +58,11 @@ const initState: GlobalStateType = {
             title: "Full-Stack Software Developer",
             dateStart: "July 2021",
             dateEnd: "March 2022",
-            description: "",
+            description: "As a full-stack developer we worked on realising the vision of a convenient payment that invloved contactless peer-to-peer payments and a Point of Sale system that accepts physical cards for payment as a mobile app (SoftPOS)",
             location: "Lipa Payments, Remote",
             rolesAndAchievements: [
               "Responsible for building the mobile apps that are currently used as the payment solution that the startup envisioned",
-              "Contributed to buildingAPIs that  form part of the core system",
+              "Contributed to building APIs that form part of the core system",
               "Contributed to piloting a solution that won the startup R10 million in investment funding"
             ],
             skills: [
@@ -121,10 +126,10 @@ const initState: GlobalStateType = {
             title: "Advanced Diploma in Computer Science",
             dateStart: "2022",
             dateEnd: "Current",
-            description: "",
+            description: "Currently completing my advanced diploma qualification as a continuation of the software development diploma I hold. Working on an interesting project where I try to contribute to alleviating the issue with low resource language datasets in South African languages.",
             location: "Tshwane University of Technology, Pretoria",
-            rolesAndAchievements: ["Studying part-time towards this qualification"],
-            skills: []
+            rolesAndAchievements: [],
+            skills: [/*"Java EE", "Data Structures", "SOA", "Machine Learning", "Data Science", "Python",*/]
           },
           {
             title: "Diploma in Information Technology - Software Development",
@@ -156,7 +161,7 @@ const initState: GlobalStateType = {
       },
     ],
   },
-  name: "Steven Mokoena",
+  name: "Steven T. Mokoena",
   slogan: "A Software Developer with a passion to solve problems",
   socialLinks: [
     { type: "linkedin", link: "https://www.linkedin.com/in/steven1mokoena" },
@@ -190,7 +195,7 @@ const initState: GlobalStateType = {
       githubLink: "https://github.com/Steven-MKN/insight-covid19",
       liveLink: "https://bit.ly/insight_v4_1",
     },
-    {
+    /*{
       title: "Passwordless Authentication",
       description:
         "...",
@@ -210,7 +215,7 @@ const initState: GlobalStateType = {
       ],
       githubLink: "",
       liveLink: "",
-    },
+    },*/
   ],
 };
 

@@ -1,7 +1,7 @@
-import React from "react";
-import { ResumeSectionItemType } from "./types";
 import { Box, Typography } from "@mui/material";
+import React from "react";
 import SkillBadge from "../SkillBadge";
+import { ResumeSectionItemType } from "./types";
 
 interface IResumeSectionItemProps {
   readonly item: ResumeSectionItemType;
@@ -31,6 +31,8 @@ const ResumeSectionItem: React.FC<IResumeSectionItemProps> = ({ item }) => {
         <Typography variant={"h6"} sx={styles.location}>
           {item.location}
         </Typography>
+
+        <Typography variant={"body1"} color={'gray'} fontSize={14}>{item.description}</Typography>
 
         <ul>
           {item.rolesAndAchievements.map((it) => (
