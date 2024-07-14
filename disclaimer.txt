@@ -1,0 +1,12 @@
+All trademarks, logos and brand names are the property of their respective owners. All company, product and service names used in this website are for identification purposes only.
+
+Icons made available by https://github.com/kamijin-fanta,
+see here for more details https://github.com/react-icons/react-icons?tab=readme-ov-file#icons
+
+UI Component library provided by Material UI,
+see here for more details https://github.com/mui/material-ui
+
+Photo https://unsplash.com/@alvarordesign Alvaro Reyes,
+See more here https://unsplash.com/s/photos/project-sprint?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+
+https://unsplash.com/photos/ZnLprInKM7s?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
