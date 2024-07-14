@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 import SkillBadge from "../SkillBadge";
 import { ResumeSectionItemType } from "./types";
@@ -16,21 +16,25 @@ const ResumeSectionItem: React.FC<IResumeSectionItemProps> = ({ item }) => {
         <Box component="span" sx={styles.sectionItemInit} />
       </Box>
       <Box sx={styles.content}>
-        <Typography variant={"h5"} sx={styles.heading}>
-          {item.title}
-        </Typography>
-        <Box sx={styles.years}>
-          <Box component="span" className={"text"}>
-            {item.dateStart}{" "}
-          </Box>{" "}
-          -{" "}
-          <Box component="span" className={"text"}>
-            {item.dateEnd}{" "}
-          </Box>
-        </Box>
         <Typography variant={"h6"} sx={styles.location}>
           {item.location}
         </Typography>
+
+        <Stack direction={'row'}>
+          <Typography variant={"h6"} sx={styles.heading}>
+            {item.title}
+          </Typography>
+
+          <Box sx={styles.years}>
+            <Box component="span" className={"text"}>
+              {item.dateStart}{" "}
+            </Box>{" "}
+            -{" "}
+            <Box component="span" className={"text"}>
+              {item.dateEnd}{" "}
+            </Box>
+          </Box>
+        </Stack>
 
         <Typography variant={"body1"} color={'gray'} fontSize={14}>{item.description}</Typography>
 
@@ -46,7 +50,7 @@ const ResumeSectionItem: React.FC<IResumeSectionItemProps> = ({ item }) => {
           ))}
         </Box>
       </Box>
-    </Box>
+    </Box >
   );
 };
 
@@ -59,7 +63,7 @@ const styles = {
   sideBar: {
     position: "absolute",
     top: "4px",
-    height: "100%",
+    height: "105%",
     width: "3px",
     background: "#445881",
   },
@@ -77,6 +81,8 @@ const styles = {
   years: {
     background: "rgba(148,148,148,0.33)",
     width: "max-content",
+    height: "min-content",
+    marginLeft: "10px",
     padding: "4px 8px 2px 8px",
     borderRadius: "2px",
   },

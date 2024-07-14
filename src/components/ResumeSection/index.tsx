@@ -25,7 +25,7 @@ const ResumeSection: React.FC<IResumeSectionProps> = ({ resumeSection }) => {
 
 const styles = {
   main: {
-    marginBottom: "12px",
+    marginBottom: "20px",
   },
   title: {
     fontSize: "26px",

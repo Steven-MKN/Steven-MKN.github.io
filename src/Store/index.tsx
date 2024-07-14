@@ -31,9 +31,9 @@ const initState: GlobalStateType = {
             location: "Synthesis Software Technologies, Johannesburg",
             rolesAndAchievements: [
               "Implementing and maintaining the React Native codebase in Typescript, including ",
-              "Ensuring the eventual native applications (android and iOS) are secure from known vulnerabilities,",
+              "Ensuring the eventual native applications (Android and iOS) are secure from known vulnerabilities,",
               "Getting involved in technical refinement sessions, understanding the technical implications and how to implement features or changes,",
-              "Creating and managing the Play store and App store releases,",
+              "Creating and managing the Play Store and App Store releases,",
               "Creating and maintaining the mobile CI/CD on Bitrise with deployments via the respective stores for prod, and via Firebase App Tester",
               "Done a bit of work with dotnet, C# and MySQL for supporting features needed on the mobile app",
             ],
@@ -55,7 +55,7 @@ const initState: GlobalStateType = {
             ]
           },
           {
-            title: "Full-Stack Software Developer",
+            title: "Software Developer",
             dateStart: "July 2021",
             dateEnd: "March 2022",
             description: "As a full-stack developer we worked on realising the vision of a convenient payment that invloved contactless peer-to-peer payments and a Point of Sale system that accepts physical cards for payment as a mobile app (SoftPOS)",

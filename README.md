@@ -18,7 +18,7 @@
 run `npm run deploy`, this will build the project and push to the `gh-pages` branch,
 github will read this branch for the landing page
 
-### When dev-ing
+### Breakpoints
 - the standard breakpoints are:
 ```
 xs: "",
@@ -27,3 +27,7 @@ md: "",
 lg: "",
 xl: "",
 ```
+
+### Icons
+- The icons are from `react-icons` package
+- A list of icons can be found [here](https://react-icons.github.io/react-icons/)

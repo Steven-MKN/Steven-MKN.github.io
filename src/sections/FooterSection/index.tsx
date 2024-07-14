@@ -4,7 +4,7 @@ import { Context } from "../../Store";
 import SocialLinks from "../../components/SocialLinks";
 import { footerSectionSelector } from "./selectors";
 
-interface IFooterSectionProps {}
+interface IFooterSectionProps { }
 
 const FooterSection: React.FC<IFooterSectionProps> = () => {
   const state = useContext(Context);
@@ -16,6 +16,9 @@ const FooterSection: React.FC<IFooterSectionProps> = () => {
       <Typography variant={"body1"}>{slogan}</Typography>
       <SocialLinks links={socialLinks} />
       <Stack>
+        <Typography variant={"caption"}>
+          Thanks to <Link href="/disclaimer.txt">these</Link> for third party resources
+        </Typography>
         <Typography variant={"caption"}>
           &copy; {new Date().getFullYear()} Steven Mokoena, All Rights Reserved
         </Typography>
