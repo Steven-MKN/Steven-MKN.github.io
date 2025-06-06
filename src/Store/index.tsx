@@ -4,7 +4,7 @@ import { GlobalStateType } from "./types";
 const initState: GlobalStateType = {
   darkMode: false,
   aboutText: [
-    "I have a diploma in software development with Rosebank College and more than 3 years of experience in the payments space",
+    "I have a diploma in software development with Rosebank College and more than 3 years of experience in the payments space.",
     "I completed my matric in 2015 with distinctions in accounting and pure maths. I went to study BCom Accounting at UCT (University of Cape Town). In 2018, I could not settle my previous years fees, and was forced to postpone my studies. I then decided to study Software Development at Rosebank College (the fees were much more affordable). I have since begun to love software development.",
     "Currently, I am a software developer at Synthesis Software Technologies, where I am responsible for building banking mobile applications for a clients. I am also completing my Advanced Diploma in Computer Science at Tshwane University of Technology.",
     "My goal is to continue building software that solves problems while continuously growing my other non-technical skills, so that I can be a well-rounded individual and hopefully lead projects in the future.",
