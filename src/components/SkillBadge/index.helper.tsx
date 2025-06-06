@@ -14,7 +14,7 @@ import {
   SiDotnet,
   SiFirebase,
   SiJavascript,
-  SiKotlin,
+  SiJetpackcompose,
   SiKubernetes,
   SiMongodb,
   SiMysql,
@@ -24,6 +24,7 @@ import {
   SiTypescript,
   SiVault,
 } from "react-icons/si";
+import { TbBrandKotlin } from "react-icons/tb";
 import { SkillBadgeIconPropsType, SkillType } from "./types";
 
 export const mapSkillToIcon = (
@@ -44,7 +45,7 @@ export const mapSkillToIcon = (
     case "Spring":
       return <SiSpring {...iconProps} />;
     case "Kotlin":
-      return <SiKotlin {...iconProps} />;
+      return <TbBrandKotlin {...iconProps} />;
     case "MongoDB":
       return <SiMongodb {...iconProps} />;
     case "MySQL":
@@ -99,6 +100,8 @@ export const mapSkillToIcon = (
       return <SiVault {...iconProps} />;
     case "Cognito":
       return <FaAws {...iconProps} />;
+    case "Compose Multiplatform":
+      return <SiJetpackcompose {...iconProps} />;
     default:
       return <DiCode {...iconProps} />;
   }

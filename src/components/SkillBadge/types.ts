@@ -37,7 +37,8 @@ export type SkillType =
   | "iOS"
   | "Windows"
   | "Vault"
-  | "Cognito";
+  | "Cognito"
+  | "Compose Multiplatform";
 
 export type SkillBadgeIconPropsType = {
   size: `${number}px`;

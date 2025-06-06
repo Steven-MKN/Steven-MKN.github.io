@@ -62,4 +62,4 @@ const styles = {
   resume: {},
 };
 
-export default withFullScreenSection(AboutSection, "About Me", true, "about");
+export default withFullScreenSection(AboutSection, "TL;DR", true, "about");
