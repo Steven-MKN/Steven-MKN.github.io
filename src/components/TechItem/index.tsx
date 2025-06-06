@@ -1,8 +1,9 @@
-import React from "react";
-import { TechItemType } from "./types";
 import { Chip } from "@mui/material";
-import UseTechItem from "./useTechItem";
+import React from "react";
+import { colorPalette } from "../../hooks/useAppTheme";
 import { mapTechIcon } from "./index.helper";
+import { TechItemType } from "./types";
+import UseTechItem from "./useTechItem";
 
 interface ITechItemProps {
   readonly item: TechItemType;
@@ -21,8 +22,8 @@ const TechItem: React.FC<ITechItemProps> = ({ item }) => {
 
 const styles = {
   main: {
-    backgroundColor: "#3c4072",
-    color: "#ffffff",
+    backgroundColor: colorPalette.primary,
+    color: colorPalette.onPrimary,
     marginRight: "3px",
     paddingLeft: "8px",
     paddingRight: "6px",

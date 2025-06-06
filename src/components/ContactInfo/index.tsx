@@ -1,8 +1,9 @@
-import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
+import React from "react";
+import { mapToIcon } from "./index.helper";
 import { ContactInfoType } from "./types";
 import UseContactInfo from "./useContactInfo";
-import { mapToIcon } from "./index.helper";
+import { colorPalette } from "../../hooks/useAppTheme";
 
 interface IContactInfoProps {
   readonly info: ContactInfoType;
@@ -46,8 +47,8 @@ const styles = {
   },
   icon: {
     padding: "12px",
-    color: "#3c4072",
-    background: "#ffffff",
+    color: colorPalette.onSurface,
+    background: colorPalette.surface,
     width: "34px",
     height: "34px",
     borderRadius: "40px",
@@ -57,7 +58,7 @@ const styles = {
     cursor: "pointer",
     marginRight: "10px",
     ":hover": {
-      background: "#3c4072",
+      background: colorPalette.primary,
     },
   },
 };

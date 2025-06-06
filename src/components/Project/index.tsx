@@ -1,8 +1,9 @@
 import { Box, Link, Typography } from "@mui/material";
 import React from "react";
-import { ProjectType } from "./types";
 import { GrGithub, GrPlayFill } from "react-icons/gr";
+import { colorPalette } from "../../hooks/useAppTheme";
 import TechItem from "../TechItem";
+import { ProjectType } from "./types";
 import UseProject from "./useProject";
 
 interface IProjectProps {
@@ -92,7 +93,7 @@ const styles = {
     margin: "16px 12px 10px",
     borderRadius: "25px",
     padding: "25px 18px",
-    background: "#e3e3e3",
+    background: colorPalette.surface,
     width: {
       xs: "85%",
       sm: "85%",

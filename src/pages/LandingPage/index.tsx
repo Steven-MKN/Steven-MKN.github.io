@@ -1,14 +1,14 @@
-import React from "react";
-import HeroSection from "../../sections/HeroSection";
-import AboutSection from "../../sections/AboutSection";
-import SideNavigation from "../../components/SideNavigation";
 import { Grid } from "@mui/material";
-import ProjectsSection from "../../sections/ProjectsSection";
-import ContactSection from "../../sections/ContactSection";
+import React from "react";
+import SideNavigation from "../../components/SideNavigation";
+import { colorPalette } from "../../hooks/useAppTheme";
+import AboutSection from "../../sections/AboutSection";
 import FooterSection from "../../sections/FooterSection";
+import HeroSection from "../../sections/HeroSection";
+import ProjectsSection from "../../sections/ProjectsSection";
 import useLandingPage from "./useLandingPage";
 
-interface ILandingPageProps {}
+interface ILandingPageProps { }
 
 const LandingPage: React.FC<ILandingPageProps> = () => {
   const { navigationItems, sectionRefs } = useLandingPage();
@@ -35,6 +35,7 @@ const styles = {
   main: {
     height: "100vh",
     overflow: "hidden",
+    background: colorPalette.background,
   },
   sectionsWrapper: {
     overflowY: "scroll",

@@ -41,4 +41,5 @@ export type SkillType =
 
 export type SkillBadgeIconPropsType = {
   size: `${number}px`;
+  color: `#${string}`;
 };

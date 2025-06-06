@@ -1,10 +1,11 @@
-import React from "react";
+// Should have this import at the entry point of the application
+
+import { ThemeProvider } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import useAppTheme from "./hooks/useAppTheme";
+import useInitAppHooks from "./hooks/useInitAppHooks";
 import LandingPage from "./pages/LandingPage";
 import ProjectPage from "./pages/ProjectPage";
-import useInitAppHooks from "./hooks/useInitAppHooks";
-import { ThemeProvider } from "@mui/material";
-import useAppTheme from "./hooks/useAppTheme";
 import Store from "./Store";
 
 function App() {

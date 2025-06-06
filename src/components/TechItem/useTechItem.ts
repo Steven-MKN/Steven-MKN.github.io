@@ -1,8 +1,9 @@
+import { colorPalette } from "../../hooks/useAppTheme";
 import { TechItemPropType } from "./types";
 
 const iconProps: TechItemPropType = {
   size: "20px",
-  color: "#ffffff",
+  color: colorPalette.onPrimary,
 };
 
 const useTechItem = () => {

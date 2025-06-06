@@ -1,10 +1,11 @@
+import { Box, Drawer } from "@mui/material";
 import React from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 import SideNavigationButton from "../SideNavigationButton";
 import { NavigationButtonType } from "../SideNavigationButton/types";
-import { Box, Drawer } from "@mui/material";
-import { GiHamburgerMenu } from "react-icons/gi";
 import SideNavigationListItem from "../SideNavigationListItem";
 import UseSideNavigation from "./useSideNavigation";
+import { colorPalette } from "../../hooks/useAppTheme";
 
 interface ISideNavigationProps {
   readonly navigationItems: NavigationButtonType[];
@@ -42,16 +43,18 @@ const SideNavigation: React.FC<ISideNavigationProps> = ({
         onClose={handleDrawerToggle}
         sx={styles.drawer}
       >
-        {navigationItems.map((it, index) => (
-          <SideNavigationListItem
-            button={it}
-            key={it.relativeRoute}
-            handleClick={() => {
-              handleNavItemClick(it.relativeRoute);
-            }}
-            isActive={index === activeSection}
-          />
-        ))}
+        <Box sx={{ background: colorPalette.surface, width: "max-content", height: "100%" }}>
+          {navigationItems.map((it, index) => (
+            <SideNavigationListItem
+              button={it}
+              key={it.relativeRoute}
+              handleClick={() => {
+                handleNavItemClick(it.relativeRoute);
+              }}
+              isActive={index === activeSection}
+            />
+          ))}
+        </Box>
       </Drawer>
     </>
   );
@@ -84,6 +87,7 @@ const styles = {
   },
   menuButton: {
     background: "#00000000",
+    color: colorPalette.onBackground,
     position: "absolute",
     width: "max-content",
     height: "max-content",
@@ -107,7 +111,7 @@ const styles = {
       md: "none",
       lg: "none",
       xl: "none",
-    },
+    }
   },
 };
 

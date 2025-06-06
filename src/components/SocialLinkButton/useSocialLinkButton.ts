@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { colorPalette } from "../../hooks/useAppTheme";
 import { SocialLinkButtonIconPropType } from "./types";
 
 const iconProps = (hover: boolean): SocialLinkButtonIconPropType => ({
-  color: hover ? "#3c4072" : "#171717",
+  color: colorPalette.onSurface,
+  ":hover": {
+    color: colorPalette.primary,
+  },
 });
 
 const useSocialLinkButton = () => {

@@ -1,5 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
+import { colorPalette } from "../../hooks/useAppTheme";
 import SkillBadge from "../SkillBadge";
 import { ResumeSectionItemType } from "./types";
 
@@ -26,13 +27,9 @@ const ResumeSectionItem: React.FC<IResumeSectionItemProps> = ({ item }) => {
           </Typography>
 
           <Box sx={styles.years}>
-            <Box component="span" className={"text"}>
-              {item.dateStart}{" "}
-            </Box>{" "}
-            -{" "}
-            <Box component="span" className={"text"}>
-              {item.dateEnd}{" "}
-            </Box>
+            <Typography component="span" className={"text"}>
+              {`${item.dateStart} -  ${item.dateEnd}`}
+            </Typography>
           </Box>
         </Stack>
 
@@ -40,7 +37,9 @@ const ResumeSectionItem: React.FC<IResumeSectionItemProps> = ({ item }) => {
 
         <ul>
           {item.rolesAndAchievements.map((it) => (
-            <li key={it}>{it}</li>
+            <li key={it} style={styles.listItem}>
+              <Typography>{it}</Typography>
+            </li>
           ))}
         </ul>
 
@@ -65,21 +64,21 @@ const styles = {
     top: "4px",
     height: "105%",
     width: "3px",
-    background: "#445881",
+    background: colorPalette.primary,
   },
   sectionItemInit: {
     width: "20px",
     height: "20px",
     borderRadius: "10px",
     position: "absolute",
-    background: "#445881",
+    background: colorPalette.primary,
     left: "-8px",
   },
   content: {
     paddingLeft: "20px",
   },
   years: {
-    background: "rgba(148,148,148,0.33)",
+    background: "rgba(93, 93, 93, 0.33)",
     width: "max-content",
     height: "min-content",
     marginLeft: "10px",
@@ -92,7 +91,7 @@ const styles = {
     marginBottom: "4px",
     fontSize: "18px",
     fontWeight: "600",
-    color: "#303464",
+    color: colorPalette.primary,
   },
   location: {
     marginTop: "6px",
@@ -104,6 +103,9 @@ const styles = {
     flexWrap: "wrap",
     justifyContent: "start",
     paddingLeft: "16px"
+  },
+  listItem: {
+    color: colorPalette.onBackground,
   },
 };
 

@@ -13,4 +13,7 @@ export type SocialIconType =
 
 export type SocialLinkButtonIconPropType = {
   color: `#${string}`;
+  ":hover": {
+    color: `#${string}`;
+  }
 };

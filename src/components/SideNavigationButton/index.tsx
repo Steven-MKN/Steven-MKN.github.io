@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
+import { colorPalette } from "../../hooks/useAppTheme";
 import { NavigationButtonType } from "./types";
 import UseSideNavigationButton from "./useSideNavigationButton";
 
@@ -27,7 +28,7 @@ const SideNavigationButton: React.FC<ISideNavigationButtonProps> = ({
     >
       <Box component="span" sx={styles.iconWrapper}>
         <button.Icon
-          color={hover || isActive ? "#e7e7e7" : "#171717"}
+          color={hover || isActive ? colorPalette.onPrimary : colorPalette.onSurface}
           size={"20px"}
         />
       </Box>
@@ -47,7 +48,7 @@ const styles = {
     height: "55px",
     borderRadius: "27.5px",
     marginBottom: "10px",
-    background: "#c9c9c9",
+    background: colorPalette.surface,
     opacity: 1,
     display: "flex",
     justifyContent: "center",
@@ -61,15 +62,15 @@ const styles = {
     minWidth: "55px",
   },
   hover: {
-    background: "#3c4072",
+    background: colorPalette.primary,
     width: "max-content",
   },
   selected: {
-    background: "#3c4072",
+    background: colorPalette.primary,
   },
   buttonText: {
     paddingRight: "35px",
-    color: "#e7e7e7",
+    color: colorPalette.onPrimary,
   },
 };
 

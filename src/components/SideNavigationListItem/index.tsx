@@ -1,5 +1,6 @@
 import { Box, Divider } from "@mui/material";
 import React from "react";
+import { colorPalette } from "../../hooks/useAppTheme";
 import { SideMenuItemType } from "./types";
 import UseSideNavigationListItem from "./useSideNavigationListItem";
 
@@ -33,7 +34,7 @@ const SideSideMenuItem: React.FC<ISideSideMenuItemProps> = ({
       <Divider />
       <Box component="span" sx={styles.iconWrapper}>
         <button.Icon
-          color={hover || isActive ? "#e7e7e7" : "#171717"}
+          color={hover || isActive ? colorPalette.primary : colorPalette.onSurface}
           size={"20px"}
         />
       </Box>
@@ -65,16 +66,16 @@ const styles = {
     paddingRight: "8px",
   },
   hover: {
-    background: "#3c4072",
-    color: "#ffffff",
+    background: colorPalette.primary,
+    color: colorPalette.onPrimary,
   },
   selected: {
-    background: "#3c4072",
-    color: "#ffffff",
+    background: colorPalette.primary,
+    color: colorPalette.onPrimary,
   },
   buttonText: (isHover: boolean, isSelected: boolean) => ({
     paddingRight: "35px",
-    color: isHover || isSelected ? "#ffffff" : "#323232",
+    color: isHover || isSelected ? colorPalette.onPrimary : colorPalette.onSurface,
   }),
 };
 

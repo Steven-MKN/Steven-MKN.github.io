@@ -1,8 +1,9 @@
-import React from "react";
-import { SocialLinkType } from "./types";
 import { Box } from "@mui/material";
-import UseSocialLinkButton from "./useSocialLinkButton";
+import React from "react";
 import { mapTypeToIcon } from "./index.helper";
+import { SocialLinkType } from "./types";
+import UseSocialLinkButton from "./useSocialLinkButton";
+import { colorPalette } from "../../hooks/useAppTheme";
 
 const SocialLinkButton: React.FC<SocialLinkType> = ({ link, type }) => {
   const { handleMouseLeave, handleMouseEnter, handleClick, hover, iconProps } =
@@ -32,7 +33,7 @@ const styles = {
     height: "32px",
     marginLeft: "5px",
     marginRight: "5px",
-    background: "rgba(255,255,255,0.50)",
+    background: colorPalette.surface,
     borderRadius: "16px",
     cursor: "pointer",
   },
