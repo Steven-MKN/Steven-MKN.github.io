@@ -2,9 +2,9 @@ import { Box, Typography } from "@mui/material";
 import React, { useContext } from "react";
 import SocialLinks from "../../components/SocialLinks";
 import withFullScreenSection from "../../hocs/withFullScreenSection";
+import { colorPalette } from "../../hooks/useAppTheme";
 import { Context } from "../../Store";
 import { heroSectionSelector } from "./selectors";
-import { colorPalette } from "../../hooks/useAppTheme";
 
 interface IHeroSectionProps {
   readonly heroSectionRef: React.MutableRefObject<any>;
@@ -24,7 +24,7 @@ const HeroSection: React.FC<IHeroSectionProps> = ({ heroSectionRef }) => {
           <Typography variant={"h2"} sx={styles.heroName}>
             {name}
           </Typography>
-          <Typography variant={"h6"}>{headline}_</Typography>
+          <Typography variant={"h6"}>{headline}</Typography>
           <SocialLinks links={socialLinks} />
         </Box>
       </Box>
@@ -55,6 +55,7 @@ const styles = {
   intro: {
     display: "flex",
     flexDirection: "column",
+    zIndex: 1,
   },
   heroName: {
     fontSize: "42px",
@@ -76,6 +77,7 @@ const styles = {
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
     borderBottomColor: colorPalette.background,
+    zIndex: 0, // Ensure it is above the main content
   }
 };
 

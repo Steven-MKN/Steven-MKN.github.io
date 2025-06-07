@@ -3,7 +3,8 @@ import { GlobalStateType } from "./types";
 
 const initState: GlobalStateType = {
   darkMode: false,
-  headline: "Software Developer | Adv. Diploma in ComSci candidate",
+  name: "Steven T. Mokoena_",
+  headline: "Software Developer | Advanced Diploma in ComSci Candidate",
   aboutText: [
     "Software Developer with nearly 5 years of professional experience delivering production-ready solutions across mobile, web, and backend platforms.",
     "Specialized in mobile development, with deep expertise in React Native and Kotlin Multiplatform, including full lifecycle management from technical refinement and implementation to Play Store/App Store releases and CI/CD setup. Proven ability to build and maintain scalable applications used internationally, with experience spanning industries such as fintech and enterprise software.",
@@ -163,7 +164,6 @@ const initState: GlobalStateType = {
       },
     ],
   },
-  name: "Steven T. Mokoena",
   slogan: "A Software Developer with a passion to solve problems",
   socialLinks: [
     { type: "linkedin", link: "https://www.linkedin.com/in/steven1mokoena" },

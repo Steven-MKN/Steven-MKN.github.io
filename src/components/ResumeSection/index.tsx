@@ -17,7 +17,7 @@ const ResumeSection: React.FC<IResumeSectionProps> = ({ resumeSection }) => {
       </Typography>
       <Box mb={"16px"} />
       {resumeSection.items.map((it) => (
-        <ResumeSectionItem item={it} key={it.title} />
+        <ResumeSectionItem item={it} key={it.location} />
       ))}
     </Box>
   );
